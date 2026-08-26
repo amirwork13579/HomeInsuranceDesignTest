@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import {
   ArrowRight,
   Building2,
@@ -13,16 +13,15 @@ import {
   HomeIcon,
   Mail,
   MapPin,
-  Menu,
   Phone,
   Play,
   ShieldCheck,
-  UserRound,
   Warehouse,
   Waves,
-  X,
 } from "lucide-react";
 
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -167,40 +166,10 @@ const partners = [
   },
 ];
 
-const nationwideOffices = [
-  ["Manchester", "First Floor, Swan Buildings, 20 Swan Street", "Manchester, M4 5JW"],
-  ["Birmingham", "Office 1, Izabella House, 24-26 Regent Place", "Birmingham, B1 3NJ"],
-  ["Leeds", "Ground Floor, Radley House, Richardshaw Road", "Leeds, LS28 6LE"],
-  ["Liverpool", "Level One, Basecamp Liverpool, 49 Jamaica Street", "Liverpool, L1 0AH"],
-  ["Glasgow", "Office 1, Technology House, 9 Newton Place", "Glasgow, G3 7PR"],
-  ["Edinburgh", "3F1, Third Floor, 3 Hill Street, New Town", "Edinburgh, EH2 3JP"],
-];
-
-const footerLinks = [
-  { title: "Services", links: ["Homeowners", "Business Owners", "Landlords"] },
-  {
-    title: "Perils",
-    links: ["Fire Damage", "Flood Damage", "Burst Pipes", "Storm Damage", "Impact Damage"],
-  },
-  { title: "Partners", links: ["Estate Agents", "Insurance Brokers", "Leak Detection"] },
-  { title: "Company", links: ["Our Process", "Loss Assessor vs Adjuster", "Claims Advice", "Contact Us"] },
-];
-
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [activeService, setActiveService] = useState(1);
   const [activePeril, setActivePeril] = useState(2);
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 70);
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const closeMenu = () => setMenuOpen(false);
 
   function submitForm(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -209,40 +178,7 @@ export default function Home() {
 
   return (
     <div className="site-shell">
-      <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
-        <div className="header-inner">
-          <a href="#top" className="brand" aria-label="Home Claims Assist home" onClick={closeMenu}>
-            <img src={`${source}/images/logo.png`} alt="Home Claims Assist" />
-          </a>
-
-          <nav className={`desktop-nav ${menuOpen ? "mobile-open" : ""}`} aria-label="Main navigation">
-            <a href="#services" onClick={closeMenu}>Services <span>▾</span></a>
-            <a href="#perils" onClick={closeMenu}>Perils <span>▾</span></a>
-            <a href="#process" onClick={closeMenu}>How It Works <span>▾</span></a>
-            <a href="#partners" onClick={closeMenu}>Partner With Us <span>▾</span></a>
-            <a href="#contact" onClick={closeMenu}>Contact</a>
-            <div className="mobile-nav-actions">
-              <a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
-              <Button asChild className="primary-button"><a href="#contact" onClick={closeMenu}>Get Started</a></Button>
-            </div>
-          </nav>
-
-          <div className="header-actions">
-            <a className="header-phone" href="tel:02034108351">020 3410 8351</a>
-            <a className="login-link" href="#contact"><UserRound aria-hidden="true" /> Login</a>
-            <Button asChild className="primary-button header-cta"><a href="#contact">Get Started</a></Button>
-            <button
-              className="menu-toggle"
-              type="button"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((open) => !open)}
-            >
-              {menuOpen ? <X /> : <Menu />}
-            </button>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero" id="top">
@@ -290,7 +226,7 @@ export default function Home() {
               When your property is damaged, your insurance company appoints a <a href="#process">loss adjuster</a> to assess the claim on their behalf. Their job is to manage the insurer&apos;s costs. A loss assessor does the opposite — we work exclusively for you, the policyholder, to ensure your claim is properly documented, correctly valued, and settled for the full amount you are entitled to.
             </p>
             <p>
-              Home Claims Assist provides specialist insurance claim management for <a href="#services">homeowners</a>, <a href="#services">landlords</a>, and <a href="#services">business owners</a> across the UK. Whether you are dealing with <a href="#perils">fire, flood, storm, burst pipe, or impact damage</a>, our qualified loss assessors handle the entire claim from initial inspection through to final settlement.
+              Home Claims Assist provides specialist insurance claim management for <a href="/homeowners">homeowners</a>, <a href="#services">landlords</a>, and <a href="#services">business owners</a> across the UK. Whether you are dealing with <a href="#perils">fire, flood, storm, burst pipe, or impact damage</a>, our qualified loss assessors handle the entire claim from initial inspection through to final settlement.
             </p>
             <p>
               With over 15 years of experience and more than £50 million recovered for our clients, we understand how insurers operate and what it takes to achieve a fair outcome. There are no upfront fees — we only get paid when your claim settles.
@@ -327,7 +263,7 @@ export default function Home() {
                       <div className="service-bottom">
                         <div><strong>{service.metric}</strong><span>{service.metricLabel}</span></div>
                         {active ? (
-                          <a className="small-button" href="#contact">Learn More <ArrowRight aria-hidden="true" /></a>
+                          <a className="small-button" href={service.title === "Homeowners" ? "/homeowners" : "#contact"}>Learn More <ArrowRight aria-hidden="true" /></a>
                         ) : (
                           <span className="tap-copy">Tap to explore <ArrowRight aria-hidden="true" /></span>
                         )}
@@ -539,36 +475,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="footer-cta">
-          <div><h2>Ready to Start Your Claim?</h2><p>Get in touch today and let our experts handle everything for you.</p></div>
-          <Button asChild className="footer-button"><a href="#contact">Contact Us Now <ArrowRight aria-hidden="true" /></a></Button>
-        </div>
-        <div className="page-width footer-main">
-          <div className="footer-brand">
-            <a href="#top" className="brand"><img src={`${source}/images/logo.png`} alt="Home Claims Assist" /></a>
-            <p>Over 15 years of experience handling insurance claims for homeowners, landlords, and businesses across the UK.</p>
-            <address>
-              <span><i /> <strong>London Office</strong><small>536 Barking Road, London, E13 8QE</small><a href="tel:02034108351">020 3410 8351</a></span>
-              <span><i /> <strong>Newcastle Office</strong><small>288a Stanhope Street, Newcastle upon Tyne, NE4 5JU</small><a href="tel:01916913162">0191 691 3162</a></span>
-            </address>
-          </div>
-          {footerLinks.map((column) => (
-            <div className="footer-column" key={column.title}>
-              <h3>{column.title}</h3>
-              <ul>{column.links.map((link) => <li key={link}><a href={link === "Contact Us" ? "#contact" : link === "Our Process" ? "#process" : link === "Homeowners" || link === "Business Owners" || link === "Landlords" ? "#services" : link.includes("Damage") || link === "Burst Pipes" ? "#perils" : "#partners"}>{link}</a></li>)}</ul>
-            </div>
-          ))}
-        </div>
-        <div className="page-width office-list">
-          <h3>Our Offices Nationwide</h3>
-          <div>{nationwideOffices.map(([city, line1, line2]) => <address key={city}><i /><strong>{city}</strong><span>{line1}<br />{line2}</span></address>)}</div>
-        </div>
-        <div className="page-width footer-bottom">
-          <p>© 2026 Home Claims Assist. All rights reserved.</p>
-          <p>Mon–Fri: 9:30 AM – 5:30 PM <span>|</span> <a href="mailto:info@homeclaimsassist.co.uk">info@homeclaimsassist.co.uk</a></p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
