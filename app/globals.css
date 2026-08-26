@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
 
 :root {
   --background: #ffffff;
@@ -27,6 +28,9 @@
   --green: #42bd4e;
   --green-dark: #2aa83d;
   --teal: #02c98c;
+  --hero-blue: #397df6;
+  --hero-blue-light: #2fbbff;
+  --hero-navy: #071a35;
   --paper: #ffffff;
   --soft: #f5f8f6;
   --line: #dfe7e2;
@@ -140,6 +144,11 @@ video {
 .brand img {
   width: 143px;
   height: auto;
+  transition: filter 220ms ease;
+}
+
+.site-header:not(.is-scrolled) .brand img {
+  filter: hue-rotate(92deg) saturate(1.3) brightness(1.08);
 }
 
 .desktop-nav {
@@ -167,6 +176,10 @@ video {
   height: 2px;
   background: var(--green);
   transition: right 180ms ease;
+}
+
+.site-header:not(.is-scrolled) .desktop-nav > a::after {
+  background: var(--hero-blue-light);
 }
 
 .desktop-nav > a:hover::after,
@@ -217,6 +230,17 @@ video {
   padding-inline: 27px;
 }
 
+.site-header:not(.is-scrolled) .header-cta,
+.site-header:not(.is-scrolled) .mobile-nav-actions .primary-button {
+  background: linear-gradient(115deg, var(--hero-blue), #2465d9);
+  box-shadow: 0 12px 28px rgba(34, 109, 238, 0.32);
+}
+
+.site-header:not(.is-scrolled) .header-cta:hover,
+.site-header:not(.is-scrolled) .mobile-nav-actions .primary-button:hover {
+  background: linear-gradient(115deg, #4c8dff, #2871ea);
+}
+
 .menu-toggle,
 .mobile-nav-actions {
   display: none;
@@ -229,7 +253,7 @@ video {
   max-height: 980px;
   overflow: hidden;
   color: #fff;
-  background: var(--ink-deep);
+  background: var(--hero-navy);
 }
 
 .hero-video {
@@ -239,6 +263,7 @@ video {
   height: 100%;
   object-fit: cover;
   object-position: 58% center;
+  filter: saturate(0.58) contrast(1.07) brightness(0.88);
   animation: heroScale 18s ease-in-out infinite alternate;
 }
 
@@ -251,8 +276,9 @@ video {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(19, 41, 52, 0.95) 0%, rgba(19, 41, 52, 0.76) 42%, rgba(17, 36, 46, 0.18) 76%, rgba(10, 20, 26, 0.38) 100%),
-    linear-gradient(0deg, rgba(19, 38, 48, 0.68), transparent 46%);
+    radial-gradient(circle at 82% 14%, rgba(35, 132, 255, 0.48), transparent 32%),
+    linear-gradient(90deg, rgba(7, 25, 54, 0.97) 0%, rgba(8, 35, 76, 0.82) 43%, rgba(17, 73, 143, 0.26) 76%, rgba(4, 18, 39, 0.48) 100%),
+    linear-gradient(0deg, rgba(5, 25, 52, 0.76), transparent 50%);
 }
 
 .hero-content {
@@ -276,13 +302,14 @@ video {
   display: flex;
   align-items: center;
   gap: 12px;
+  color: var(--hero-blue-light);
   animation: riseIn 700ms 160ms both;
 }
 
 .hero-eyebrow span {
   width: 48px;
   height: 2px;
-  background: var(--green);
+  background: var(--hero-blue-light);
 }
 
 .hero h1 {
@@ -299,7 +326,16 @@ video {
   display: block;
 }
 
-.hero h1 em,
+.hero h1 em {
+  color: var(--hero-blue-light);
+  background: linear-gradient(115deg, #36c3ff, #4e77ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+  font-weight: inherit;
+}
+
 .process-intro h2 em {
   color: var(--teal);
   font-style: normal;
@@ -334,7 +370,7 @@ video {
   min-width: 220px;
   padding-right: 34px;
   margin-right: 34px;
-  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-right: 1px solid rgba(73, 151, 255, 0.28);
 }
 
 .hero-stats > div:last-child {
@@ -366,6 +402,12 @@ video {
   min-height: 62px;
   padding-inline: 36px;
   font-size: 16px;
+  background: linear-gradient(115deg, var(--hero-blue), #2368e0);
+  box-shadow: 0 16px 34px rgba(25, 104, 232, 0.36);
+}
+
+.hero-button:hover {
+  background: linear-gradient(115deg, #4c91ff, #2d72ea);
 }
 
 .outline-call {
@@ -389,7 +431,7 @@ video {
 
 .outline-call svg {
   width: 19px;
-  color: var(--green);
+  color: var(--hero-blue-light);
 }
 
 .hero-note {
@@ -403,7 +445,7 @@ video {
 
 .hero-note svg {
   width: 15px;
-  color: var(--green);
+  color: var(--hero-blue-light);
 }
 
 .scroll-cue {
@@ -438,7 +480,7 @@ video {
   width: 2px;
   height: 7px;
   border-radius: 2px;
-  background: var(--green);
+  background: var(--hero-blue-light);
   animation: scrollDot 1.6s ease-in-out infinite;
 }
 
@@ -1687,6 +1729,10 @@ video {
     color: var(--green);
   }
 
+  .site-header:not(.is-scrolled) .mobile-nav-actions svg {
+    color: var(--hero-blue);
+  }
+
   .header-cta {
     display: none;
   }
@@ -1842,7 +1888,10 @@ video {
   }
 
   .hero-overlay {
-    background: linear-gradient(90deg, rgba(18, 39, 50, 0.96), rgba(18, 39, 50, 0.58)), linear-gradient(0deg, rgba(18, 39, 50, 0.72), transparent);
+    background:
+      radial-gradient(circle at 78% 15%, rgba(38, 139, 255, 0.42), transparent 34%),
+      linear-gradient(90deg, rgba(6, 24, 52, 0.97), rgba(8, 44, 92, 0.64)),
+      linear-gradient(0deg, rgba(5, 24, 52, 0.78), transparent);
   }
 
   .hero-content {
