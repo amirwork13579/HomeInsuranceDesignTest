@@ -12,6 +12,10 @@
   --partner-image: url("https://www.homeclaimsassist.co.uk/images/heroes/leak-detection.jpg");
 }
 
+.processPage {
+  --partner-image: url("https://www.homeclaimsassist.co.uk/images/heroes/our-process.jpg");
+}
+
 .hero {
   position: relative;
   min-height: 780px;
@@ -92,6 +96,11 @@
 .leakPage .hero h1 {
   max-width: 980px;
   font-size: clamp(54px, 5.3vw, 80px);
+}
+
+.processPage .hero h1 {
+  max-width: 1040px;
+  font-size: clamp(52px, 5.2vw, 78px);
 }
 
 .heroCopy {
@@ -221,6 +230,60 @@
   line-height: 1.65;
 }
 
+.supportSection {
+  position: relative;
+  z-index: 2;
+  background: #f7faf8;
+}
+
+.supportGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #dfe9e3;
+  border-radius: 20px;
+  background: #dfe9e3;
+  box-shadow: 0 24px 58px rgba(17, 53, 76, 0.15);
+  transform: translateY(-36px);
+}
+
+.supportGrid article {
+  display: flex;
+  min-height: 126px;
+  align-items: center;
+  gap: 16px;
+  padding: 26px;
+  background: #fff;
+}
+
+.supportGrid article > svg {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #eaf7fa;
+  color: #147f9d;
+}
+
+.supportGrid article > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.supportGrid strong {
+  font-size: 15px;
+}
+
+.supportGrid small {
+  margin-top: 5px;
+  color: var(--muted-text);
+  font-size: 10px;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
 .problemSection,
 .solutionSection,
 .benefitsSection,
@@ -229,7 +292,8 @@
 .claimsSection,
 .proofSection,
 .relatedSection,
-.faqSection {
+.faqSection,
+.timelineSection {
   padding: 108px 0;
 }
 
@@ -420,17 +484,20 @@
 }
 
 .brokerPage .solutionGrid,
-.leakPage .solutionGrid {
+.leakPage .solutionGrid,
+.processPage .solutionGrid {
   grid-template-columns: repeat(5, 1fr);
 }
 
 .brokerPage .solutionGrid li,
-.leakPage .solutionGrid li {
+.leakPage .solutionGrid li,
+.processPage .solutionGrid li {
   padding: 24px;
 }
 
 .brokerPage .solutionGrid h3,
-.leakPage .solutionGrid h3 {
+.leakPage .solutionGrid h3,
+.processPage .solutionGrid h3 {
   font-size: 18px;
 }
 
@@ -477,6 +544,59 @@
   line-height: 1.7;
 }
 
+.assessorNote {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  max-width: 980px;
+  margin: -18px auto 38px;
+  padding: 23px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.assessorNote > span {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(75, 208, 233, 0.13);
+  color: #4bd0e9;
+}
+
+.assessorNote > span svg {
+  width: 29px;
+}
+
+.assessorNote h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.assessorNote p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.assessorNote > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #4bd0e9;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.assessorNote > a svg {
+  width: 16px;
+}
+
 .benefitsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -515,6 +635,98 @@
   color: var(--muted-text);
   font-size: 13px;
   line-height: 1.68;
+}
+
+.timelineSection {
+  background: #f7faf8;
+}
+
+.timelineTableWrap {
+  overflow: hidden;
+  border: 1px solid #dfe8e2;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(29, 53, 63, 0.09);
+}
+
+.timelineTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timelineTable th,
+.timelineTable td {
+  padding: 20px 26px;
+  border-bottom: 1px solid #e4ece7;
+  text-align: left;
+}
+
+.timelineTable th {
+  color: #fff;
+  background: #183b4c;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.timelineTable td {
+  color: var(--muted-text);
+  font-size: 14px;
+}
+
+.timelineTable td:last-child {
+  color: #147f9d;
+  font-size: 16px;
+  font-weight: 850;
+}
+
+.timelineTable tr:last-child td {
+  border-bottom: 0;
+}
+
+.timelineNote {
+  max-width: 900px;
+  margin: 27px auto 0;
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.coverageGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.coverageGrid article {
+  min-height: 205px;
+  padding: 27px;
+  border: 1px solid #e1e9e4;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(29, 53, 63, 0.06);
+}
+
+.coverageGrid article > svg {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #eaf7ed;
+  color: var(--green-dark);
+}
+
+.coverageGrid h3 {
+  margin: 22px 0 8px;
+  font-size: 17px;
+}
+
+.coverageGrid p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 12px;
+  line-height: 1.62;
 }
 
 .differenceGrid {
@@ -670,6 +882,10 @@
 }
 
 .brokerPage .claimsGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.processPage .claimsGrid {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -1041,7 +1257,14 @@
 
   .brokerPage .solutionGrid,
   .brokerPage .claimsGrid,
-  .leakPage .solutionGrid {
+  .leakPage .solutionGrid,
+  .processPage .solutionGrid,
+  .processPage .claimsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .supportGrid,
+  .coverageGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1129,6 +1352,10 @@
     font-size: 44px;
   }
 
+  .processPage .hero h1 {
+    font-size: 43px;
+  }
+
   .exclusiveSection {
     padding-bottom: 10px;
   }
@@ -1157,7 +1384,8 @@
   .claimsSection,
   .proofSection,
   .relatedSection,
-  .faqSection {
+  .faqSection,
+  .timelineSection {
     padding: 78px 0;
   }
 
@@ -1186,8 +1414,37 @@
   .brokerPage .solutionGrid,
   .brokerPage .claimsGrid,
   .leakPage .solutionGrid,
+  .processPage .solutionGrid,
+  .processPage .claimsGrid,
   .differenceGrid {
     grid-template-columns: 1fr;
+  }
+
+  .supportGrid,
+  .coverageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .supportGrid {
+    transform: translateY(-24px);
+  }
+
+  .supportGrid article {
+    min-height: 102px;
+    padding: 21px;
+  }
+
+  .assessorNote {
+    grid-template-columns: 1fr;
+    margin-top: -8px;
+  }
+
+  .timelineTableWrap {
+    overflow-x: auto;
+  }
+
+  .timelineTable {
+    min-width: 620px;
   }
 
   .differencePanel {

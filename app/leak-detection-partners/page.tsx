@@ -308,7 +308,7 @@ export default function LeakDetectionPartnersPage() {
               ))}
             </div>
             <p className={styles.claimsNote}>
-              Clients can also review our <Link href="/#process">step-by-step claims process</Link> before we contact them.
+              Clients can also review our <Link href="/our-process">step-by-step claims process</Link> before we contact them.
             </p>
           </div>
         </section>

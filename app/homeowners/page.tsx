@@ -208,7 +208,7 @@ export default function HomeownersPage() {
                 <li><Check aria-hidden="true" /> Detailed evidence and professional valuations</li>
                 <li><Check aria-hidden="true" /> Direct negotiation with the insurer&apos;s team</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/our-process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -274,7 +274,7 @@ export default function HomeownersPage() {
             <div className={styles.relatedGrid}>
               <Link href="/fire-damage"><Flame aria-hidden="true" /><span><strong>Fire Damage Claims</strong><small>Support for fire, smoke, contents, and reinstatement claims.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/flood-damage"><Waves aria-hidden="true" /><span><strong>Flood Damage Claims</strong><small>Assessment, drying, decontamination, and full restoration.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we handle a claim from first contact to settlement.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/our-process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we handle a claim from first contact to settlement.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>
         </section>

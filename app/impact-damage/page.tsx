@@ -313,7 +313,7 @@ export default function ImpactDamagePage() {
                 <li><Check aria-hidden="true" /> Secondary water, contents, and external damage included</li>
                 <li><Check aria-hidden="true" /> Home and third-party insurers handled through settlement</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/our-process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <div className={styles.processStages}>
               <span><strong>01</strong><small>Make the site safe and secure</small></span>

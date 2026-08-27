@@ -124,7 +124,7 @@ const propertyClaims = [
     title: "Full claims process",
     copy: "See how we manage assessment, insurer communication, settlement negotiation, and reinstatement.",
     icon: BriefcaseBusiness,
-    href: "/#process",
+    href: "/our-process",
   },
 ];
 

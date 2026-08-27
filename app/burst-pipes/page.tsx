@@ -331,7 +331,7 @@ export default function BurstPipesPage() {
                 <li><Check aria-hidden="true" /> Drying, repair, and contents schedules prepared</li>
                 <li><Check aria-hidden="true" /> Insurer negotiation handled through settlement</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/our-process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <div className={styles.processStages}>
               <span><strong>01</strong><small>Stop the escape and make safe</small></span>

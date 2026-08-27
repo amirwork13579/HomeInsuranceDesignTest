@@ -302,7 +302,7 @@ export default function BusinessOwnersPage() {
             <div className={styles.relatedGrid}>
               <Link href="/fire-damage"><Flame aria-hidden="true" /><span><strong>Fire Damage Claims</strong><small>Specialist support for fire, smoke, stock, and interruption losses.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/storm-damage"><CloudLightning aria-hidden="true" /><span><strong>Storm Damage Claims</strong><small>Emergency protection, structural assessment, and reinstatement.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we manage an insurance claim step by step.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/our-process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we manage an insurance claim step by step.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>
         </section>

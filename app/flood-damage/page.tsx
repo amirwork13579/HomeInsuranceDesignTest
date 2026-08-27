@@ -332,7 +332,7 @@ export default function FloodDamagePage() {
                 <li><Check aria-hidden="true" /> Detailed repair and contents schedules</li>
                 <li><Check aria-hidden="true" /> Direct insurer negotiation through to settlement</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/our-process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <div className={styles.processStages}>
               <span><strong>01</strong><small>Extract and make safe</small></span>

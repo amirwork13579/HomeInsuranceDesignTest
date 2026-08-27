@@ -327,7 +327,7 @@ export default function StormDamagePage() {
                 <li><Check aria-hidden="true" /> Emergency, structural, contents, and finishing costs included</li>
                 <li><Check aria-hidden="true" /> Insurer challenges handled through final settlement</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/our-process">See our claims process <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <div className={styles.processStages}>
               <span><strong>01</strong><small>Make the property safe and watertight</small></span>

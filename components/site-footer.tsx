@@ -44,7 +44,7 @@ const footerLinks = [
   {
     title: "Company",
     links: [
-      ["Our Process", "/#process"],
+      ["Our Process", "/our-process"],
       ["Loss Assessor vs Adjuster", "/#process"],
       ["Claims Advice", "/#intro"],
       ["Contact Us", "/#contact"],

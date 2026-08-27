@@ -31,7 +31,7 @@ export function SiteHeader() {
         <nav className={`desktop-nav ${menuOpen ? "mobile-open" : ""}`} aria-label="Main navigation">
           <Link href="/#services" onClick={closeMenu}>Services <span>▾</span></Link>
           <Link href="/#perils" onClick={closeMenu}>Perils <span>▾</span></Link>
-          <Link href="/#process" onClick={closeMenu}>How It Works <span>▾</span></Link>
+          <Link href="/our-process" onClick={closeMenu}>How It Works <span>▾</span></Link>
           <Link href="/#partners" onClick={closeMenu}>Partner With Us <span>▾</span></Link>
           <Link href="/#contact" onClick={closeMenu}>Contact</Link>
           <div className="mobile-nav-actions">
