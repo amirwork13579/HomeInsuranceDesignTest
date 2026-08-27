@@ -93,7 +93,7 @@ export default function ClaimsAdvicePage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -145,7 +145,7 @@ export default function ClaimsAdvicePage() {
               <span>If you are dealing with a claim right now and want to know whether you are approaching it correctly, speak to our team. The initial consultation is free.</span>
             </div>
             <Button asChild className={blogStyles.liveClaimButton}>
-              <Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link>
+              <Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link>
             </Button>
           </div>
         </section>

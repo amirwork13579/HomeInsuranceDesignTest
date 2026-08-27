@@ -189,7 +189,7 @@ export default function InsuranceBrokersPage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Partner With Us <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Partner With Us <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -338,7 +338,7 @@ export default function InsuranceBrokersPage() {
                 <li><Check aria-hidden="true" /> Structured weekly updates throughout the claim</li>
                 <li><Check aria-hidden="true" /> Referral commission on eligible settlements</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#contact">Discuss a partnership <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Discuss a partnership <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <div className={styles.proofVisual} role="img" aria-label="Insurance brokers partnering with Home Claims Assist">
               <div><Handshake aria-hidden="true" /><span><small>Your claims partner</small><strong>Protecting every client relationship</strong></span></div>
@@ -355,7 +355,7 @@ export default function InsuranceBrokersPage() {
               <span>Let us show you how the partner process works — it takes 15 minutes.</span>
             </div>
             <div>
-              <Button asChild className={styles.whiteButton}><Link href="/#contact">Partner With Us <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className={styles.whiteButton}><Link href="/contact">Partner With Us <ArrowRight aria-hidden="true" /></Link></Button>
               <a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
           </div>

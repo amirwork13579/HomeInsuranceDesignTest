@@ -148,7 +148,7 @@ export default function HomeownersPage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -183,7 +183,7 @@ export default function HomeownersPage() {
                 <strong>Not sure what your policy covers?</strong>
                 <p>If your home has suffered damage, let us review the situation before you accept an insurer&apos;s valuation.</p>
               </div>
-              <Button asChild className="primary-button"><Link href="/#contact">Get free advice <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Get free advice <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -260,7 +260,7 @@ export default function HomeownersPage() {
               <p>Need help with your home insurance claim?</p>
               <h2>Let an experienced assessor handle the pressure.</h2>
             </div>
-            <Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
+            <Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
           </div>
         </section>
 

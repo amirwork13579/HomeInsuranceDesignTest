@@ -184,7 +184,7 @@ export default function EstateAgentsPage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get in Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get in Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -328,7 +328,7 @@ export default function EstateAgentsPage() {
                 <li><Check aria-hidden="true" /> Weekly updates throughout every active claim</li>
                 <li><Check aria-hidden="true" /> Referral commission on eligible settlements</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#contact">Discuss a partnership <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Discuss a partnership <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <div className={styles.proofVisual} role="img" aria-label="Estate agents partnering with Home Claims Assist">
               <div><Handshake aria-hidden="true" /><span><small>Your claims department</small><strong>Without another hire</strong></span></div>
@@ -345,7 +345,7 @@ export default function EstateAgentsPage() {
               <span>We&apos;ll walk your team through the process in 15 minutes.</span>
             </div>
             <div>
-              <Button asChild className={styles.whiteButton}><Link href="/#contact">Get in Touch <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className={styles.whiteButton}><Link href="/contact">Get in Touch <ArrowRight aria-hidden="true" /></Link></Button>
               <a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
           </div>

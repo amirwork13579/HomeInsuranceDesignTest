@@ -47,7 +47,7 @@ const footerLinks = [
       ["Our Process", "/our-process"],
       ["Loss Assessor vs Adjuster", "/loss-assessor-vs-loss-adjuster"],
       ["Claims Advice", "/blog"],
-      ["Contact Us", "/#contact"],
+      ["Contact Us", "/contact"],
     ],
   },
 ];
@@ -57,7 +57,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-cta">
         <div><h2>Ready to Start Your Claim?</h2><p>Get in touch today and let our experts handle everything for you.</p></div>
-        <Button asChild className="footer-button"><Link href="/#contact">Contact Us Now <ArrowRight aria-hidden="true" /></Link></Button>
+        <Button asChild className="footer-button"><Link href="/contact">Contact Us Now <ArrowRight aria-hidden="true" /></Link></Button>
       </div>
       <div className="page-width footer-main">
         <div className="footer-brand">

@@ -33,17 +33,17 @@ export function SiteHeader() {
           <Link href="/#perils" onClick={closeMenu}>Perils <span>▾</span></Link>
           <Link href="/our-process" onClick={closeMenu}>How It Works <span>▾</span></Link>
           <Link href="/#partners" onClick={closeMenu}>Partner With Us <span>▾</span></Link>
-          <Link href="/#contact" onClick={closeMenu}>Contact</Link>
+          <Link href="/contact" onClick={closeMenu}>Contact</Link>
           <div className="mobile-nav-actions">
             <a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
-            <Button asChild className="primary-button"><Link href="/#contact" onClick={closeMenu}>Get Started</Link></Button>
+            <Button asChild className="primary-button"><Link href="/contact" onClick={closeMenu}>Get Started</Link></Button>
           </div>
         </nav>
 
         <div className="header-actions">
           <a className="header-phone" href="tel:02034108351">020 3410 8351</a>
-          <Link className="login-link" href="/#contact"><UserRound aria-hidden="true" /> Login</Link>
-          <Button asChild className="primary-button header-cta"><Link href="/#contact">Get Started</Link></Button>
+          <Link className="login-link" href="/contact"><UserRound aria-hidden="true" /> Login</Link>
+          <Button asChild className="primary-button header-cta"><Link href="/contact">Get Started</Link></Button>
           <button
             className="menu-toggle"
             type="button"

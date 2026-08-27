@@ -203,7 +203,7 @@ export default function BurstPipesPage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -245,7 +245,7 @@ export default function BurstPipesPage() {
             <div className={styles.safetyCallout}>
               <AlertTriangle aria-hidden="true" />
               <div><strong>Water and electricity are a dangerous combination.</strong><p>Do not touch wet sockets, switches, appliances, or the consumer unit. Call an electrician or emergency service when isolation is unsafe.</p></div>
-              <Button asChild className="primary-button"><Link href="/#contact">Get urgent advice <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Get urgent advice <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -364,7 +364,7 @@ export default function BurstPipesPage() {
               <p>Dealing with burst-pipe damage?</p>
               <h2>Make sure visible and hidden losses are both included.</h2>
             </div>
-            <Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
+            <Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
           </div>
         </section>
 

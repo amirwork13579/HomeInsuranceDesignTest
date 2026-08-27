@@ -186,7 +186,7 @@ export default function ImpactDamagePage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -228,7 +228,7 @@ export default function ImpactDamagePage() {
             <div className={styles.safetyCallout}>
               <AlertTriangle aria-hidden="true" />
               <div><strong>Visible damage may not show the full structural risk.</strong><p>Keep people away from the impact area until foundations, load-bearing elements, utilities, and temporary support requirements have been professionally checked.</p></div>
-              <Button asChild className="primary-button"><Link href="/#contact">Get urgent advice <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Get urgent advice <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -292,7 +292,7 @@ export default function ImpactDamagePage() {
             <div className={styles.safetyCallout}>
               <CarFront aria-hidden="true" />
               <div><strong>Your policy or the third party&apos;s insurance?</strong><p>If a driver, contractor, neighbour, or other organisation caused the impact, another insurer may be responsible. We compare the available routes and manage the claim without leaving necessary repairs caught between insurers.</p></div>
-              <Button asChild className="primary-button"><Link href="/#contact">Review my claim route <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Review my claim route <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -346,7 +346,7 @@ export default function ImpactDamagePage() {
               <p>Has your property suffered impact damage?</p>
               <h2>Make sure hidden structure and every recovery route are assessed.</h2>
             </div>
-            <Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
+            <Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
           </div>
         </section>
 

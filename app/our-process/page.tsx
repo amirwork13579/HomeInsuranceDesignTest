@@ -196,7 +196,7 @@ export default function OurProcessPage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -273,7 +273,7 @@ export default function OurProcessPage() {
               <h2>What If My Insurer Rejects My Claim?</h2>
               <p>Rejection is not necessarily the end. We review the insurer&apos;s explanation against your policy, the evidence, and the actual cause of damage.</p>
               <p>If the decision can be challenged, we prepare the case, respond to the insurer, and help escalate through the formal complaints process or Financial Ombudsman Service where appropriate.</p>
-              <Button asChild className="primary-button"><Link href="/#contact">Discuss a rejected claim <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Discuss a rejected claim <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <aside className={styles.regulationPanel}>
               <span><ShieldCheck aria-hidden="true" /></span>
@@ -322,7 +322,7 @@ export default function OurProcessPage() {
         <section className={styles.partnerBanner}>
           <div className="page-width">
             <div><p>Ready to start the process?</p><h2>Free consultation. Clear advice. Complete claim management.</h2><span>Tell us what happened and our team will explain exactly how we can help.</span></div>
-            <div><Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button><a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a></div>
+            <div><Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button><a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a></div>
           </div>
         </section>
 
@@ -332,7 +332,7 @@ export default function OurProcessPage() {
             <div className={styles.relatedGrid}>
               <Link href="/homeowners"><Home aria-hidden="true" /><span><strong>Homeowner Claims</strong><small>Complete property insurance claim support.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/loss-assessor-vs-loss-adjuster"><Scale aria-hidden="true" /><span><strong>Loss Assessor vs Adjuster</strong><small>Understand who works for you and who works for the insurer.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#contact"><Phone aria-hidden="true" /><span><strong>Contact Us</strong><small>Get a free consultation with our claims team.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/contact"><Phone aria-hidden="true" /><span><strong>Contact Us</strong><small>Get a free consultation with our claims team.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>
         </section>

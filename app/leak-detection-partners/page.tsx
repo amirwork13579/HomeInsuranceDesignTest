@@ -196,7 +196,7 @@ export default function LeakDetectionPartnersPage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Apply to Partner <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Apply to Partner <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -324,7 +324,7 @@ export default function LeakDetectionPartnersPage() {
                 <li><Check aria-hidden="true" /> Client contacted within 24 hours</li>
                 <li><Check aria-hidden="true" /> Commission on eligible settled claims</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#contact">Check your area <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Check your area <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <div className={styles.proofVisual} role="img" aria-label="Leak detection companies partnering with Home Claims Assist">
               <div><Handshake aria-hidden="true" /><span><small>Exclusive partnership</small><strong>Your area. Your opportunity.</strong></span></div>
@@ -341,7 +341,7 @@ export default function LeakDetectionPartnersPage() {
               <span>Let us check availability and explain the partnership — it takes 10 minutes.</span>
             </div>
             <div>
-              <Button asChild className={styles.whiteButton}><Link href="/#contact">Apply to Partner <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className={styles.whiteButton}><Link href="/contact">Apply to Partner <ArrowRight aria-hidden="true" /></Link></Button>
               <a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
           </div>

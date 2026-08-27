@@ -199,7 +199,7 @@ export default function StormDamagePage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -241,7 +241,7 @@ export default function StormDamagePage() {
             <div className={styles.safetyCallout}>
               <AlertTriangle aria-hidden="true" />
               <div><strong>Do not climb onto a damaged roof.</strong><p>Loose tiles, weakened coverings, damaged chimneys, and unstable ceilings can fail without warning. Keep clear and use qualified emergency contractors.</p></div>
-              <Button asChild className="primary-button"><Link href="/#contact">Get urgent advice <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Get urgent advice <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -360,7 +360,7 @@ export default function StormDamagePage() {
               <p>Has a storm damaged your property?</p>
               <h2>Build the evidence before the insurer calls it wear and tear.</h2>
             </div>
-            <Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
+            <Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
           </div>
         </section>
 

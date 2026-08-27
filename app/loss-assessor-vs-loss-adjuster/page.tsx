@@ -141,7 +141,7 @@ export default function LossAssessorVsAdjusterPage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -232,7 +232,7 @@ export default function LossAssessorVsAdjusterPage() {
               <h2>Do You Need a Loss Assessor?</h2>
               <p>You are not legally required to appoint one. But the insurance company already has experienced claims handlers, underwriters, adjusters, surveyors, and legal resources protecting its position.</p>
               <p>A loss assessor levels the playing field. This is particularly valuable where liability is disputed, the loss is complex, significant accommodation or income costs are involved, or the offer appears too low.</p>
-              <Button asChild className="primary-button"><Link href="/#contact">Discuss your claim <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Discuss your claim <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <aside className={styles.regulationPanel}>
               <span><ShieldCheck aria-hidden="true" /></span>
@@ -259,7 +259,7 @@ export default function LossAssessorVsAdjusterPage() {
                 <li><Check aria-hidden="true" /> No hidden charges</li>
                 <li><Check aria-hidden="true" /> Fee agreed before instruction</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#contact">Get a free consultation <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Get a free consultation <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
             <div className={styles.proofVisual} role="img" aria-label="Independent loss assessor representing a policyholder">
               <div><Handshake aria-hidden="true" /><span><small>Independent representation</small><strong>A professional on your side</strong></span></div>
@@ -281,7 +281,7 @@ export default function LossAssessorVsAdjusterPage() {
         <section className={styles.partnerBanner}>
           <div className="page-width">
             <div><p>Want a loss assessor on your side?</p><h2>Free consultation. Independent advice. Professional representation.</h2><span>We will assess your situation and explain how we can maximise your insurance claim.</span></div>
-            <div><Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button><a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a></div>
+            <div><Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button><a href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a></div>
           </div>
         </section>
 
@@ -291,7 +291,7 @@ export default function LossAssessorVsAdjusterPage() {
             <div className={styles.relatedGrid}>
               <Link href="/our-process"><FileText aria-hidden="true" /><span><strong>Our Claims Process</strong><small>From first contact through settlement and reinstatement.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/homeowners"><Home aria-hidden="true" /><span><strong>Homeowner Claims</strong><small>Complete insurance claim support for property owners.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#contact"><Phone aria-hidden="true" /><span><strong>Contact Us</strong><small>Get a free consultation with our claims team.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/contact"><Phone aria-hidden="true" /><span><strong>Contact Us</strong><small>Get a free consultation with our claims team.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>
         </section>
@@ -315,3 +315,4 @@ export default function LossAssessorVsAdjusterPage() {
 function SectionHeading({ eyebrow, title, copy }: { eyebrow: string; title: string; copy: string }) {
   return <div className={styles.sectionHeading}><p className={styles.eyebrow}>{eyebrow}</p><h2>{title}</h2><p>{copy}</p></div>;
 }
+

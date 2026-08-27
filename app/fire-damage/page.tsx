@@ -223,7 +223,7 @@ export default function FireDamagePage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -265,7 +265,7 @@ export default function FireDamagePage() {
             <div className={styles.safetyCallout}>
               <AlertTriangle aria-hidden="true" />
               <div><strong>Never risk your safety for claim evidence.</strong><p>Only enter or approach damaged areas after the emergency services or an appropriate professional confirms it is safe.</p></div>
-              <Button asChild className="primary-button"><Link href="/#contact">Get emergency advice <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Get emergency advice <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -348,7 +348,7 @@ export default function FireDamagePage() {
                 <li><Check aria-hidden="true" /> UK-wide support for homes, rentals, and businesses</li>
                 <li><Check aria-hidden="true" /> Claim management from first assessment to settlement</li>
               </ul>
-              <Button asChild className="primary-button"><Link href="/#contact">Talk to an assessor <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Talk to an assessor <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -393,7 +393,7 @@ export default function FireDamagePage() {
               <p>Suffered fire damage to your property?</p>
               <h2>Don&apos;t face the insurance claim alone.</h2>
             </div>
-            <Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
+            <Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
           </div>
         </section>
 

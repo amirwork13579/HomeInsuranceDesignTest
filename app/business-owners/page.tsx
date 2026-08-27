@@ -186,7 +186,7 @@ export default function BusinessOwnersPage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -221,7 +221,7 @@ export default function BusinessOwnersPage() {
                 <strong>Need help with a business claim?</strong>
                 <p>We support organisations from sole traders to multi-site operations throughout the UK.</p>
               </div>
-              <Button asChild className="primary-button"><Link href="/#contact">Get free advice <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Get free advice <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -288,7 +288,7 @@ export default function BusinessOwnersPage() {
               <p>Business affected by property damage?</p>
               <h2>We&apos;ll manage the claim while you run the business.</h2>
             </div>
-            <Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
+            <Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
           </div>
         </section>
 

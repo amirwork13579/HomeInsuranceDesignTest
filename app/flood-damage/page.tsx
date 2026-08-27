@@ -204,7 +204,7 @@ export default function FloodDamagePage() {
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" className="primary-button hero-button">
-                <Link href="/#contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/contact">Get In Touch <ArrowRight aria-hidden="true" /></Link>
               </Button>
               <a className={styles.heroPhone} href="tel:02034108351"><Phone aria-hidden="true" /> 020 3410 8351</a>
             </div>
@@ -246,7 +246,7 @@ export default function FloodDamagePage() {
             <div className={styles.safetyCallout}>
               <AlertTriangle aria-hidden="true" />
               <div><strong>Treat flood water as contaminated.</strong><p>Do not enter standing water or operate electrical equipment until the area is assessed as safe.</p></div>
-              <Button asChild className="primary-button"><Link href="/#contact">Get urgent advice <ArrowRight aria-hidden="true" /></Link></Button>
+              <Button asChild className="primary-button"><Link href="/contact">Get urgent advice <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </div>
         </section>
@@ -365,7 +365,7 @@ export default function FloodDamagePage() {
               <p>Property affected by flooding?</p>
               <h2>Let specialists manage the drying, restoration, and claim.</h2>
             </div>
-            <Button asChild className={styles.whiteButton}><Link href="/#contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
+            <Button asChild className={styles.whiteButton}><Link href="/contact">Contact Us <ArrowRight aria-hidden="true" /></Link></Button>
           </div>
         </section>
 

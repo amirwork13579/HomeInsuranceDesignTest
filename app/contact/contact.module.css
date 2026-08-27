@@ -1,0 +1,471 @@
+.contactPage {
+  background: #fff;
+}
+
+.contactHero {
+  min-height: 760px;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(51, 181, 244, 0.38), transparent 28%),
+    radial-gradient(circle at 70% 80%, rgba(44, 112, 225, 0.24), transparent 36%),
+    linear-gradient(118deg, #05162e 0%, #092e64 55%, #0b608f 100%);
+}
+
+.contactHeroShade {
+  background:
+    linear-gradient(90deg, rgba(2, 14, 32, 0.34), transparent 68%),
+    linear-gradient(0deg, rgba(3, 15, 32, 0.74), transparent 58%);
+}
+
+.contactHeroInner {
+  min-height: 760px;
+}
+
+.contactHero h1 {
+  max-width: 980px;
+  font-size: clamp(58px, 6vw, 86px);
+}
+
+.heroContactRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 940px;
+  margin-top: 45px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(14px);
+}
+
+.heroContactRow > a,
+.heroContactRow > span {
+  display: flex;
+  min-height: 96px;
+  align-items: center;
+  gap: 14px;
+  padding: 21px 23px;
+  background: rgba(5, 29, 62, 0.72);
+}
+
+.heroContactRow svg {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  padding: 9px;
+  border-radius: 12px;
+  background: rgba(47, 187, 255, 0.16);
+  color: var(--hero-blue-light);
+}
+
+.heroContactRow span span,
+.heroContactRow a span {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroContactRow strong {
+  font-size: 14px;
+}
+
+.heroContactRow small {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.contactSection {
+  padding: 112px 0;
+  background: #f7faf8;
+}
+
+.contactLayout {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.contactCopy > h2 {
+  margin: 0;
+  font-size: clamp(42px, 4.4vw, 60px);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.contactCopy > p:not(.eyebrow) {
+  margin: 20px 0 31px;
+  color: var(--muted-text);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.contactCards {
+  display: grid;
+  gap: 12px;
+}
+
+.contactCards > a {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) 20px;
+  gap: 16px;
+  align-items: center;
+  min-height: 112px;
+  padding: 20px;
+  border: 1px solid #dfe8e2;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(25, 53, 65, 0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contactCards > a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 17px 38px rgba(25, 53, 65, 0.11);
+}
+
+.contactCards > a > svg:first-child {
+  width: 54px;
+  height: 54px;
+  padding: 14px;
+  border-radius: 15px;
+  background: #e9f7ed;
+  color: var(--green-dark);
+}
+
+.contactCards > a > svg:last-child {
+  width: 18px;
+  color: var(--green-dark);
+}
+
+.contactCards span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.contactCards small {
+  color: #6f8076;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contactCards strong {
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+  font-size: 16px;
+}
+
+.contactCards em {
+  margin-top: 4px;
+  color: var(--muted-text);
+  font-size: 10px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.hoursCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(120deg, #173f78, #1e78c8);
+}
+
+.hoursCard > svg {
+  width: 43px;
+  height: 43px;
+  padding: 10px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hoursCard > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.hoursCard strong {
+  font-size: 13px;
+}
+
+.hoursCard small,
+.hoursCard em {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 10px;
+  font-style: normal;
+}
+
+.hoursCard em {
+  margin-left: auto;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.consultationForm {
+  min-height: 730px;
+  padding: 42px;
+  border: 1px solid #dce6e0;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0 28px 72px rgba(22, 53, 68, 0.14);
+}
+
+.formHeading {
+  margin-bottom: 30px;
+}
+
+.formHeading p {
+  margin: 0 0 8px;
+  color: var(--green-dark);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.formHeading h2 {
+  margin: 0;
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.formHeading span {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 17px;
+}
+
+.formGrid label {
+  display: grid;
+  gap: 7px;
+  color: #283c47;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.fullField {
+  grid-column: 1 / -1;
+}
+
+.formInput,
+.formSelect {
+  width: 100%;
+  height: 54px !important;
+  border-radius: 12px !important;
+  border-color: #dbe5df !important;
+  padding-inline: 16px !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+.formTextarea {
+  min-height: 122px !important;
+  resize: vertical;
+  border-radius: 12px !important;
+  border-color: #dbe5df !important;
+  padding: 14px 16px !important;
+  box-shadow: none !important;
+}
+
+.submitButton {
+  width: 100%;
+  min-height: 58px;
+  margin-top: 23px;
+}
+
+.formDisclaimer {
+  margin: 13px auto 0;
+  max-width: 540px;
+  color: #89968f;
+  font-size: 9px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.formSuccess {
+  display: flex;
+  min-height: 470px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 35px;
+  text-align: center;
+}
+
+.formSuccess i {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8f7ed;
+  color: var(--green-dark);
+}
+
+.formSuccess i svg {
+  width: 32px;
+}
+
+.formSuccess h3 {
+  margin: 22px 0 8px;
+  font-size: 28px;
+}
+
+.formSuccess p {
+  max-width: 470px;
+  margin: 0 0 23px;
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.officesSection {
+  padding: 112px 0;
+  background: #fff;
+}
+
+.officeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.officeGrid article {
+  min-height: 230px;
+  padding: 26px;
+  border: 1px solid #dfe8e2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(23, 51, 63, 0.06);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.officeGrid article:hover {
+  transform: translateY(-5px);
+  border-color: #b9d9c3;
+  box-shadow: 0 20px 42px rgba(23, 51, 63, 0.11);
+}
+
+.officeGrid article > svg {
+  width: 46px;
+  height: 46px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #e8f6ec;
+  color: var(--green-dark);
+}
+
+.officeGrid h3 {
+  margin: 19px 0 8px;
+  font-size: 21px;
+}
+
+.officeGrid address {
+  min-height: 58px;
+  color: var(--muted-text);
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.65;
+}
+
+.officeGrid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 13px;
+  color: #176c45;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.officeGrid a svg {
+  width: 15px;
+}
+
+@media (max-width: 1080px) {
+  .contactLayout {
+    grid-template-columns: 1fr;
+    gap: 58px;
+  }
+
+  .officeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .contactHero,
+  .contactHeroInner {
+    min-height: 920px;
+  }
+
+  .contactHero h1 {
+    font-size: 49px;
+  }
+
+  .heroContactRow {
+    grid-template-columns: 1fr;
+    margin-top: 34px;
+  }
+
+  .heroContactRow > a,
+  .heroContactRow > span {
+    min-height: 78px;
+    padding: 15px 18px;
+  }
+
+  .contactSection,
+  .officesSection {
+    padding: 78px 0;
+  }
+
+  .consultationForm {
+    min-height: 0;
+    padding: 29px 22px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullField {
+    grid-column: auto;
+  }
+
+  .hoursCard {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hoursCard em {
+    width: 100%;
+    margin-left: 57px;
+    white-space: normal;
+  }
+
+  .officeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .officeGrid article {
+    min-height: 0;
+  }
+}
