@@ -121,7 +121,7 @@ const perils = [
       "High winds, heavy rain and lightning can cause structural damage. We assess the full extent and negotiate complete repairs.",
     image: `${source}/images/services/storm-damage.jpg`,
     icon: CloudLightning,
-    href: "#contact",
+    href: "/storm-damage",
   },
   {
     title: "Impact Damage",

@@ -29,7 +29,7 @@ const footerLinks = [
       ["Fire Damage", "/fire-damage"],
       ["Flood Damage", "/flood-damage"],
       ["Burst Pipes", "/burst-pipes"],
-      ["Storm Damage", "/#perils"],
+      ["Storm Damage", "/storm-damage"],
       ["Impact Damage", "/#perils"],
     ],
   },

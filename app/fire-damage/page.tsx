@@ -241,7 +241,7 @@ export default function FireDamagePage() {
             <Link className={styles.activePeril} href="/fire-damage"><Flame aria-hidden="true" /> Fire Damage</Link>
             <Link href="/flood-damage"><Waves aria-hidden="true" /> Flood Damage</Link>
             <Link href="/burst-pipes"><Droplets aria-hidden="true" /> Burst Pipes</Link>
-            <Link href="/#perils"><CloudLightning aria-hidden="true" /> Storm Damage</Link>
+            <Link href="/storm-damage"><CloudLightning aria-hidden="true" /> Storm Damage</Link>
             <Link href="/#perils"><Building2 aria-hidden="true" /> Impact Damage</Link>
           </div>
         </nav>
@@ -405,7 +405,7 @@ export default function FireDamagePage() {
               copy="Explore other common property claims or learn more about our support for homeowners."
             />
             <div className={styles.relatedGrid}>
-              <Link href="/#perils"><CloudLightning aria-hidden="true" /><span><strong>Storm Damage Claims</strong><small>Roof, structure, water ingress, and emergency protection.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/storm-damage"><CloudLightning aria-hidden="true" /><span><strong>Storm Damage Claims</strong><small>Roof, structure, water ingress, and emergency protection.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/flood-damage"><Waves aria-hidden="true" /><span><strong>Flood Damage Claims</strong><small>Assessment, drying, decontamination, and reinstatement.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/homeowners"><Home aria-hidden="true" /><span><strong>Homeowner Claims</strong><small>Complete insurance claim support for property owners.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>

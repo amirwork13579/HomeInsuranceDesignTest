@@ -8,6 +8,10 @@
   --peril-image: url("https://www.homeclaimsassist.co.uk/images/services/burst-pipes-damage.jpg");
 }
 
+.stormPage {
+  --peril-image: url("https://www.homeclaimsassist.co.uk/images/services/storm-damage.jpg");
+}
+
 .hero {
   position: relative;
   min-height: 760px;

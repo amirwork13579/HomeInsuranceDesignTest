@@ -221,7 +221,7 @@ export default function BurstPipesPage() {
             <Link href="/fire-damage"><Flame aria-hidden="true" /> Fire Damage</Link>
             <Link href="/flood-damage"><Waves aria-hidden="true" /> Flood Damage</Link>
             <Link className={styles.activePeril} href="/burst-pipes"><Droplets aria-hidden="true" /> Burst Pipes</Link>
-            <Link href="/#perils"><CloudLightning aria-hidden="true" /> Storm Damage</Link>
+            <Link href="/storm-damage"><CloudLightning aria-hidden="true" /> Storm Damage</Link>
             <Link href="/#perils"><Building2 aria-hidden="true" /> Impact Damage</Link>
           </div>
         </nav>

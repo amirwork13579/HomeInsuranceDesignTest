@@ -60,7 +60,7 @@ const rentalClaims = [
     title: "Storm Damage",
     copy: "Roof damage, water ingress, fallen trees, fencing, emergency repairs, and weatherproofing after severe conditions.",
     icon: CloudLightning,
-    href: "/#perils",
+    href: "/storm-damage",
   },
 ];
 

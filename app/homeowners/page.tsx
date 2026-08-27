@@ -54,7 +54,7 @@ const damageTypes = [
     title: "Storm Damage",
     copy: "Roof repairs, water ingress, fallen trees, fencing, outbuildings, and emergency work after severe weather.",
     icon: CloudLightning,
-    href: "/#perils",
+    href: "/storm-damage",
   },
   {
     title: "Burst Pipes",
