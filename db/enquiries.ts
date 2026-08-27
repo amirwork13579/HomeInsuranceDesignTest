@@ -28,6 +28,29 @@ export type EnquiryStats = {
   resolved: number;
 };
 
+export type EnquiryActivityKind = "created" | "note" | "status_change";
+
+export type EnquiryActivityRecord = {
+  id: string;
+  enquiryId: string;
+  kind: EnquiryActivityKind;
+  content: string;
+  fromStatus: EnquiryStatus | null;
+  toStatus: EnquiryStatus | null;
+  actorEmail: string | null;
+  actorName: string;
+  createdAt: string;
+};
+
+type EnquiryActivityRow = Omit<
+  EnquiryActivityRecord,
+  "kind" | "fromStatus" | "toStatus"
+> & {
+  kind: string;
+  fromStatus: string | null;
+  toStatus: string | null;
+};
+
 type EnquiryRow = Omit<EnquiryRecord, "status"> & { status: string };
 
 type EnquiryStatsRow = {
@@ -40,33 +63,47 @@ type EnquiryStatsRow = {
 
 export async function createEnquiry(enquiry: NewEnquiry) {
   const id = crypto.randomUUID();
-  const result = await getD1()
-    .prepare(
-      `INSERT INTO enquiries (
+  const activityId = crypto.randomUUID();
+  const database = getD1();
+  const results = await database.batch([
+    database
+      .prepare(
+        `INSERT INTO enquiries (
+          id,
+          first_name,
+          last_name,
+          email,
+          phone,
+          claim_type,
+          message,
+          source
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+      )
+      .bind(
         id,
-        first_name,
-        last_name,
-        email,
-        phone,
-        claim_type,
-        message,
-        source
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
-    )
-    .bind(
-      id,
-      enquiry.firstName,
-      enquiry.lastName,
-      enquiry.email,
-      enquiry.phone,
-      enquiry.claimType,
-      enquiry.message,
-      enquiry.source
-    )
-    .run();
+        enquiry.firstName,
+        enquiry.lastName,
+        enquiry.email,
+        enquiry.phone,
+        enquiry.claimType,
+        enquiry.message,
+        enquiry.source
+      ),
+    database
+      .prepare(
+        `INSERT INTO enquiry_activity (
+          id,
+          enquiry_id,
+          kind,
+          content,
+          actor_name
+        ) VALUES (?, ?, 'created', ?, 'Website')`
+      )
+      .bind(activityId, id, enquiry.source),
+  ]);
 
-  if (!result.success) {
-    throw new Error("D1 did not confirm the enquiry insert.");
+  if (!results.every((result) => result.success)) {
+    throw new Error("D1 did not confirm the enquiry transaction.");
   }
 
   return id;
@@ -157,11 +194,108 @@ export async function getEnquiryStats(): Promise<EnquiryStats> {
   };
 }
 
-export async function updateEnquiryStatus(id: string, status: EnquiryStatus) {
+export async function listEnquiryActivity(enquiryId: string) {
+  const rows = await getD1()
+    .prepare(
+      `SELECT
+        id,
+        enquiry_id AS enquiryId,
+        kind,
+        content,
+        from_status AS fromStatus,
+        to_status AS toStatus,
+        actor_email AS actorEmail,
+        actor_name AS actorName,
+        created_at AS createdAt
+      FROM enquiry_activity
+      WHERE enquiry_id = ?
+      ORDER BY created_at DESC, id DESC
+      LIMIT 100`
+    )
+    .bind(enquiryId)
+    .all<EnquiryActivityRow>();
+
+  return (rows.results ?? []).map((row): EnquiryActivityRecord => ({
+    ...row,
+    kind:
+      row.kind === "note" || row.kind === "status_change" ? row.kind : "created",
+    fromStatus: isEnquiryStatus(row.fromStatus) ? row.fromStatus : null,
+    toStatus: isEnquiryStatus(row.toStatus) ? row.toStatus : null,
+  }));
+}
+
+export async function addEnquiryNote(options: {
+  enquiryId: string;
+  note: string;
+  actorEmail: string;
+  actorName: string;
+}) {
+  const id = crypto.randomUUID();
   const result = await getD1()
-    .prepare("UPDATE enquiries SET status = ? WHERE id = ?")
-    .bind(status, id)
+    .prepare(
+      `INSERT INTO enquiry_activity (
+        id,
+        enquiry_id,
+        kind,
+        content,
+        actor_email,
+        actor_name
+      )
+      SELECT ?, id, 'note', ?, ?, ?
+      FROM enquiries
+      WHERE id = ?`
+    )
+    .bind(
+      id,
+      options.note,
+      options.actorEmail,
+      options.actorName,
+      options.enquiryId
+    )
     .run();
 
   return Number(result.meta.changes ?? 0) > 0;
+}
+
+export async function updateEnquiryStatus(
+  id: string,
+  status: EnquiryStatus,
+  actor: { email: string; name: string }
+) {
+  const database = getD1();
+  const current = await database
+    .prepare("SELECT status FROM enquiries WHERE id = ?")
+    .bind(id)
+    .first<{ status: string }>();
+
+  if (!current) return { found: false, changed: false };
+
+  const currentStatus = isEnquiryStatus(current.status) ? current.status : "new";
+  if (currentStatus === status) return { found: true, changed: false };
+
+  const activityId = crypto.randomUUID();
+  const results = await database.batch([
+    database
+      .prepare("UPDATE enquiries SET status = ? WHERE id = ?")
+      .bind(status, id),
+    database
+      .prepare(
+        `INSERT INTO enquiry_activity (
+          id,
+          enquiry_id,
+          kind,
+          from_status,
+          to_status,
+          actor_email,
+          actor_name
+        ) VALUES (?, ?, 'status_change', ?, ?, ?, ?)`
+      )
+      .bind(activityId, id, currentStatus, status, actor.email, actor.name),
+  ]);
+
+  if (!results.every((result) => result.success)) {
+    throw new Error("D1 did not confirm the status update transaction.");
+  }
+
+  return { found: true, changed: true };
 }

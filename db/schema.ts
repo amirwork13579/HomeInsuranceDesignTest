@@ -20,3 +20,24 @@ export const enquiries = sqliteTable(
     index("enquiries_created_at_idx").on(table.createdAt),
   ]
 );
+
+export const enquiryActivity = sqliteTable(
+  "enquiry_activity",
+  {
+    id: text("id").primaryKey(),
+    enquiryId: text("enquiry_id")
+      .notNull()
+      .references(() => enquiries.id, { onDelete: "cascade" }),
+    kind: text("kind").notNull(),
+    content: text("content").notNull().default(""),
+    fromStatus: text("from_status"),
+    toStatus: text("to_status"),
+    actorEmail: text("actor_email"),
+    actorName: text("actor_name").notNull(),
+    createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  },
+  (table) => [
+    index("enquiry_activity_enquiry_idx").on(table.enquiryId),
+    index("enquiry_activity_created_at_idx").on(table.createdAt),
+  ]
+);

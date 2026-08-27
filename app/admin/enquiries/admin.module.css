@@ -680,6 +680,210 @@
   background: #effaf4 !important;
 }
 
+.activityPanel {
+  overflow: hidden;
+  border: 1px solid #dce5ed;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.activityHeader {
+  display: grid;
+  grid-template-columns: 35px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e7edf2;
+  background: #fbfcfe;
+}
+
+.activityHeader > span {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border-radius: 10px;
+  color: #216db6;
+  background: #e9f3fd;
+}
+
+.activityHeader > span svg {
+  width: 16px;
+}
+
+.activityHeader > div {
+  min-width: 0;
+}
+
+.activityHeader small {
+  display: block;
+  margin-bottom: 2px;
+  color: #8b98a2;
+  font-size: 7px;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.activityHeader h3 {
+  margin: 0;
+  color: #2b4252;
+  font-size: 12px;
+}
+
+.activityHeader [data-slot="badge"] {
+  min-width: 27px;
+  color: #61727f;
+  background: #fff;
+  font-size: 9px;
+}
+
+.noteForm {
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e7edf2;
+}
+
+.noteForm label {
+  color: #3a5262;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.noteForm [data-slot="textarea"] {
+  min-height: 86px;
+  resize: vertical;
+  border-color: #d9e3eb;
+  border-radius: 10px;
+  background: #fafcfd;
+  box-shadow: none;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.noteActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.noteActions small {
+  color: #9aa5ad;
+  font-size: 8px;
+}
+
+.noteActions [data-slot="button"] {
+  height: 34px;
+  border-radius: 9px;
+  background: #1f6fbe;
+  font-size: 9px;
+}
+
+.activityTimeline {
+  display: grid;
+  padding: 8px 18px 16px;
+}
+
+.activityItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 11px;
+  padding: 12px 0;
+}
+
+.activityItem:not(:last-child)::after {
+  position: absolute;
+  top: 44px;
+  bottom: -1px;
+  left: 15px;
+  width: 1px;
+  background: #dfe7ee;
+  content: "";
+}
+
+.activityIcon {
+  z-index: 1;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+
+.activityIcon svg {
+  width: 13px;
+}
+
+.activityCreated { color: #236fae; background: #dfeffc; }
+.activityStatus { color: #6b4dae; background: #ece6ff; }
+.activityNote { color: #9b650b; background: #fff0cc; }
+
+.activityContent {
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.activityContent > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.activityContent strong {
+  color: #314958;
+  font-size: 10px;
+}
+
+.activityContent time {
+  flex: 0 0 auto;
+  color: #9aa5ad;
+  font-size: 7px;
+}
+
+.activityContent p {
+  margin: 5px 0 0;
+  color: #647580;
+  font-size: 10px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.activityContent > small {
+  display: block;
+  margin-top: 5px;
+  color: #99a4ac;
+  font-size: 7px;
+}
+
+.activityLoading,
+.activityEmpty {
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #89969f;
+  font-size: 9px;
+  text-align: center;
+}
+
+.activityLoading svg {
+  width: 15px;
+}
+
+.spinning {
+  animation: activity-spin 800ms linear infinite;
+}
+
+@keyframes activity-spin {
+  to { transform: rotate(360deg); }
+}
+
 .loadingShell {
   min-height: 100vh;
   display: grid;
