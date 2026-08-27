@@ -300,6 +300,15 @@
   text-align: center;
 }
 
+.formError {
+  margin: 18px 0 -8px;
+  color: #b42318;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .formSuccess {
   display: flex;
   min-height: 470px;

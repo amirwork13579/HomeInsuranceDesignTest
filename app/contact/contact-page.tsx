@@ -86,10 +86,48 @@ const faqs = [
 
 export function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  function submitForm(event: FormEvent<HTMLFormElement>) {
+  async function submitForm(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    setSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/enquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: data.get("firstName"),
+          lastName: data.get("lastName"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          claimType: data.get("claimType") ?? "",
+          message: data.get("message") ?? "",
+          source: "contact",
+        }),
+      });
+      const payload = (await response.json().catch(() => ({}))) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(payload.error ?? "We could not send your enquiry.");
+      }
+
+      form.reset();
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "We could not send your enquiry. Please try again."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -134,9 +172,9 @@ export function ContactPage() {
               {submitted ? (
                 <div className={contactStyles.formSuccess} role="status">
                   <i><Check aria-hidden="true" /></i>
-                  <h3>Thank you — your request is ready.</h3>
-                  <p>This design demo does not send personal information. Connect the form to your chosen CRM or email service before launch.</p>
-                  <Button type="button" className="primary-button" onClick={() => setSubmitted(false)}>Send another enquiry</Button>
+                  <h3>Thank you — your enquiry has been received.</h3>
+                  <p>Your enquiry has been saved. A member of the claims team will contact you shortly.</p>
+                  <Button type="button" className="primary-button" onClick={() => { setSubmitted(false); setSubmitError(""); }}>Send another enquiry</Button>
                 </div>
               ) : (
                 <>
@@ -155,7 +193,8 @@ export function ContactPage() {
                     </label>
                     <label className={contactStyles.fullField} htmlFor="message">Tell Us About Your Claim<Textarea className={contactStyles.formTextarea} id="message" name="message" placeholder="Brief description of the damage..." /></label>
                   </div>
-                  <Button type="submit" size="lg" className={`primary-button ${contactStyles.submitButton}`}>Get Your Free Consultation <ArrowRight aria-hidden="true" /></Button>
+                  {submitError && <p className={contactStyles.formError} role="alert">{submitError}</p>}
+                  <Button type="submit" size="lg" className={`primary-button ${contactStyles.submitButton}`} disabled={submitting}>{submitting ? "Sending..." : "Get Your Free Consultation"} {!submitting && <ArrowRight aria-hidden="true" />}</Button>
                   <p className={contactStyles.formDisclaimer}>By submitting this form, you agree to be contacted by Home Claims Assist regarding your insurance claim.</p>
                 </>
               )}

@@ -181,10 +181,48 @@ export default function Home() {
   const [activeService, setActiveService] = useState(1);
   const [activePeril, setActivePeril] = useState(2);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  function submitForm(event: FormEvent<HTMLFormElement>) {
+  async function submitForm(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    setSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/enquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: data.get("firstName"),
+          lastName: data.get("lastName"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          claimType: data.get("claimType") ?? "",
+          message: data.get("message") ?? "",
+          source: "homepage",
+        }),
+      });
+      const payload = (await response.json().catch(() => ({}))) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(payload.error ?? "We could not send your enquiry.");
+      }
+
+      form.reset();
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "We could not send your enquiry. Please try again."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -455,9 +493,9 @@ export default function Home() {
               {submitted ? (
                 <div className="form-success" role="status">
                   <span><Check aria-hidden="true" /></span>
-                  <h4>Thank you — your request is ready.</h4>
-                  <p>This design demo does not send personal information. Connect the form to your chosen CRM or email service before launch.</p>
-                  <Button type="button" className="primary-button" onClick={() => setSubmitted(false)}>Send another enquiry</Button>
+                  <h4>Thank you — your enquiry has been received.</h4>
+                  <p>Your enquiry has been saved. A member of the claims team will contact you shortly.</p>
+                  <Button type="button" className="primary-button" onClick={() => { setSubmitted(false); setSubmitError(""); }}>Send another enquiry</Button>
                 </div>
               ) : (
                 <>
@@ -477,7 +515,8 @@ export default function Home() {
                     </label>
                     <label className="full-field">Tell Us About Your Claim<Textarea name="message" placeholder="Brief description of the damage..." /></label>
                   </div>
-                  <Button type="submit" size="lg" className="primary-button submit-button">Get Your Free Consultation <ArrowRight aria-hidden="true" /></Button>
+                  {submitError && <p className="form-error" role="alert">{submitError}</p>}
+                  <Button type="submit" size="lg" className="primary-button submit-button" disabled={submitting}>{submitting ? "Sending..." : "Get Your Free Consultation"} {!submitting && <ArrowRight aria-hidden="true" />}</Button>
                   <p className="form-disclaimer">By submitting this form, you agree to be contacted regarding your insurance claim.</p>
                 </>
               )}
