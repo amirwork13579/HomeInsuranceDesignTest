@@ -218,7 +218,7 @@ export default function StormDamagePage() {
             <Link href="/flood-damage"><Waves aria-hidden="true" /> Flood Damage</Link>
             <Link href="/burst-pipes"><Droplets aria-hidden="true" /> Burst Pipes</Link>
             <Link className={styles.activePeril} href="/storm-damage"><CloudLightning aria-hidden="true" /> Storm Damage</Link>
-            <Link href="/#perils"><Building2 aria-hidden="true" /> Impact Damage</Link>
+            <Link href="/impact-damage"><Building2 aria-hidden="true" /> Impact Damage</Link>
           </div>
         </nav>
 
@@ -372,7 +372,7 @@ export default function StormDamagePage() {
               copy="Explore impact and fire claims or complete insurance claim management for homeowners."
             />
             <div className={styles.relatedGrid}>
-              <Link href="/#perils"><Building2 aria-hidden="true" /><span><strong>Impact Damage Claims</strong><small>Vehicles, fallen trees, objects, and structural assessment.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/impact-damage"><Building2 aria-hidden="true" /><span><strong>Impact Damage Claims</strong><small>Vehicles, fallen trees, objects, and structural assessment.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/fire-damage"><Flame aria-hidden="true" /><span><strong>Fire Damage Claims</strong><small>Fire, smoke, contents, accommodation, and repairs.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/homeowners"><Home aria-hidden="true" /><span><strong>Homeowner Claims</strong><small>Complete insurance claim support for property owners.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>

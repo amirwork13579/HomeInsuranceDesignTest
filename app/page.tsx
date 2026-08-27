@@ -129,7 +129,7 @@ const perils = [
       "Vehicle collisions, falling trees and other impacts are handled from first assessment through to settlement.",
     image: `${source}/images/services/impact-damage.jpg`,
     icon: CarFront,
-    href: "#contact",
+    href: "/impact-damage",
   },
 ];
 

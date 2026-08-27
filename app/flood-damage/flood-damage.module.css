@@ -12,6 +12,10 @@
   --peril-image: url("https://www.homeclaimsassist.co.uk/images/services/storm-damage.jpg");
 }
 
+.impactPage {
+  --peril-image: url("https://www.homeclaimsassist.co.uk/images/services/impact-damage.jpg");
+}
+
 .hero {
   position: relative;
   min-height: 760px;

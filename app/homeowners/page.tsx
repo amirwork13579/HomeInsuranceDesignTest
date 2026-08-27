@@ -66,7 +66,7 @@ const damageTypes = [
     title: "Impact Damage",
     copy: "Vehicle collisions, falling trees and objects, plus the structural and contents damage caused by an accidental impact.",
     icon: CarFront,
-    href: "/#perils",
+    href: "/impact-damage",
   },
 ];
 

@@ -65,7 +65,7 @@ const commercialClaims = [
     title: "Impact Damage",
     copy: "Vehicle collisions, fallen trees, structural surveys, temporary works, and third-party recovery where applicable.",
     icon: Truck,
-    href: "/#perils",
+    href: "/impact-damage",
   },
   {
     title: "Escape of Water",

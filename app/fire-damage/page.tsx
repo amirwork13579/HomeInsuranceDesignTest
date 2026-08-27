@@ -242,7 +242,7 @@ export default function FireDamagePage() {
             <Link href="/flood-damage"><Waves aria-hidden="true" /> Flood Damage</Link>
             <Link href="/burst-pipes"><Droplets aria-hidden="true" /> Burst Pipes</Link>
             <Link href="/storm-damage"><CloudLightning aria-hidden="true" /> Storm Damage</Link>
-            <Link href="/#perils"><Building2 aria-hidden="true" /> Impact Damage</Link>
+            <Link href="/impact-damage"><Building2 aria-hidden="true" /> Impact Damage</Link>
           </div>
         </nav>
 
