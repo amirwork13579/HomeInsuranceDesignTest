@@ -142,7 +142,7 @@ const damageTypes = [
   { title: "Storm damage claims", copy: "Roof repairs, water ingress, fallen trees, and emergency works.", icon: CloudLightning, href: "/storm-damage" },
   { title: "Burst pipe claims", copy: "Escape of water, collapsed ceilings, drying, and hidden damp.", icon: Droplets, href: "/burst-pipes" },
   { title: "Impact damage claims", copy: "Vehicle collisions, fallen objects, structural surveys, and repairs.", icon: CarFront, href: "/impact-damage" },
-  { title: "Loss assessor guidance", copy: "Understand who represents you and who works for the insurance company.", icon: Scale, href: "/#intro" },
+  { title: "Loss assessor guidance", copy: "Understand who represents you and who works for the insurance company.", icon: Scale, href: "/loss-assessor-vs-loss-adjuster" },
 ];
 
 const faqs = [
@@ -224,7 +224,7 @@ export default function OurProcessPage() {
             <div className={styles.assessorNote}>
               <span><Scale aria-hidden="true" /></span>
               <div><h3>Loss Assessor vs Loss Adjuster</h3><p>A loss assessor works for you. A loss adjuster works for the insurance company. Independent representation protects your interests throughout the claim.</p></div>
-              <Link href="/#intro">Learn more <ArrowRight aria-hidden="true" /></Link>
+              <Link href="/loss-assessor-vs-loss-adjuster">Learn more <ArrowRight aria-hidden="true" /></Link>
             </div>
             <ol className={styles.solutionGrid}>
               {processSteps.map(({ number, title, copy, icon: Icon }) => (
@@ -331,7 +331,7 @@ export default function OurProcessPage() {
             <SectionHeading eyebrow="Explore More" title="Related Services" copy="Explore specialist claim support or learn more about the professionals involved in your insurance claim." />
             <div className={styles.relatedGrid}>
               <Link href="/homeowners"><Home aria-hidden="true" /><span><strong>Homeowner Claims</strong><small>Complete property insurance claim support.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#intro"><Scale aria-hidden="true" /><span><strong>Loss Assessor vs Adjuster</strong><small>Understand who works for you and who works for the insurer.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/loss-assessor-vs-loss-adjuster"><Scale aria-hidden="true" /><span><strong>Loss Assessor vs Adjuster</strong><small>Understand who works for you and who works for the insurer.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#contact"><Phone aria-hidden="true" /><span><strong>Contact Us</strong><small>Get a free consultation with our claims team.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>

@@ -234,7 +234,7 @@ export default function Home() {
           <div className="narrow-copy">
             <h2>What Is a Loss Assessor and Why Do You Need One?</h2>
             <p>
-              When your property is damaged, your insurance company appoints a <a href="#process">loss adjuster</a> to assess the claim on their behalf. Their job is to manage the insurer&apos;s costs. A loss assessor does the opposite — we work exclusively for you, the policyholder, to ensure your claim is properly documented, correctly valued, and settled for the full amount you are entitled to.
+              When your property is damaged, your insurance company appoints a <a href="/loss-assessor-vs-loss-adjuster">loss adjuster</a> to assess the claim on their behalf. Their job is to manage the insurer&apos;s costs. A loss assessor does the opposite — we work exclusively for you, the policyholder, to ensure your claim is properly documented, correctly valued, and settled for the full amount you are entitled to.
             </p>
             <p>
               Home Claims Assist provides specialist insurance claim management for <a href="/homeowners">homeowners</a>, <a href="/landlords">landlords</a>, and <a href="/business-owners">business owners</a> across the UK. Whether you are dealing with <a href="#perils">fire, flood, storm, burst pipe, or impact damage</a>, our qualified loss assessors handle the entire claim from initial inspection through to final settlement.
@@ -356,7 +356,7 @@ export default function Home() {
               <aside>
                 <h3>Loss Assessor vs Loss Adjuster</h3>
                 <p>A <strong>Loss Assessor</strong> works for you, the policyholder. A Loss Adjuster works for the insurance company. Having us on your side keeps your interests protected.</p>
-                <a href="#contact">Learn More <ArrowRight aria-hidden="true" /></a>
+                <a href="/loss-assessor-vs-loss-adjuster">Learn More <ArrowRight aria-hidden="true" /></a>
               </aside>
             </div>
             <ol className="timeline">
