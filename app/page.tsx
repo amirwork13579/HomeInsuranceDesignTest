@@ -105,7 +105,7 @@ const perils = [
       "From flash flooding to river damage, we manage emergency mitigation, drying and full reinstatement of your property.",
     image: `${source}/images/services/flood-damage.jpg`,
     icon: Waves,
-    href: "#contact",
+    href: "/flood-damage",
   },
   {
     title: "Burst Pipes",

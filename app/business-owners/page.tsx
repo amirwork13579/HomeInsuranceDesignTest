@@ -53,7 +53,7 @@ const commercialClaims = [
     title: "Flood Damage",
     copy: "Industrial drying, contamination clean-up, plant and stock assessment, and revenue protection throughout restoration.",
     icon: Droplets,
-    href: "/#perils",
+    href: "/flood-damage",
   },
   {
     title: "Storm Damage",

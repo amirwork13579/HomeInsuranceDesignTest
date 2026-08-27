@@ -48,7 +48,7 @@ const rentalClaims = [
     title: "Flood Damage",
     copy: "River, surface-water, and drainage flooding, including contamination clean-up, specialist drying, and full reinstatement.",
     icon: Waves,
-    href: "/#perils",
+    href: "/flood-damage",
   },
   {
     title: "Fire & Smoke Damage",

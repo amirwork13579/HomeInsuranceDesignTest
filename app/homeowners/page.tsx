@@ -48,7 +48,7 @@ const damageTypes = [
     title: "Flood Damage",
     copy: "Drying programmes, contamination clean-up, structural assessment, and contents claims following internal or external flooding.",
     icon: Waves,
-    href: "/#perils",
+    href: "/flood-damage",
   },
   {
     title: "Storm Damage",
@@ -273,7 +273,7 @@ export default function HomeownersPage() {
             />
             <div className={styles.relatedGrid}>
               <Link href="/fire-damage"><Flame aria-hidden="true" /><span><strong>Fire Damage Claims</strong><small>Support for fire, smoke, contents, and reinstatement claims.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#perils"><Waves aria-hidden="true" /><span><strong>Flood Damage Claims</strong><small>Assessment, drying, decontamination, and full restoration.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/flood-damage"><Waves aria-hidden="true" /><span><strong>Flood Damage Claims</strong><small>Assessment, drying, decontamination, and full restoration.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we handle a claim from first contact to settlement.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>
