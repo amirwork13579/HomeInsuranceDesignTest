@@ -1,25 +1,30 @@
 # Home Insurance Design Test
 
 A responsive, from-scratch React recreation of the public
-[Home Claims Assist](https://www.homeclaimsassist.co.uk/) homepage. It mirrors
-the reference site's visual direction and main homepage flow while keeping the
-implementation self-contained and easy to change.
+[Home Claims Assist](https://www.homeclaimsassist.co.uk/) website. It includes
+the public marketing pages, consultation workflow, and an authenticated claims
+administration area.
 
 ## Included
 
-- full-screen video hero and responsive navigation
-- interactive service and claim-type cards
-- insurance coverage, results, process, partner, and testimonial sections
+- 18 responsive public routes covering audiences, claim types, partners, process, blog, and contact content
+- full-screen video hero, responsive navigation, interactive service cards, and consultation forms
 - working video dialog
-- responsive consultation form with safe demo feedback
+- D1-backed enquiry storage with server-side validation
+- ChatGPT-authenticated admin dashboard with search, filtering, record details, and status management
 - mobile, tablet, reduced-motion, keyboard, and focus states
 
 ## Run locally
 
 ```bash
 npm install
+cp .dev.vars.example .dev.vars
 npm run dev
 ```
+
+Replace `owner@example.com` in `.dev.vars` with the ChatGPT email that should
+have administrator access. Multiple administrators can be separated with
+commas. The hosted environment must define the same `ADMIN_EMAILS` value.
 
 For a production build:
 
@@ -27,8 +32,9 @@ For a production build:
 npm run build
 ```
 
-The form is intentionally a front-end demo and does not transmit personal
-information. Connect it to a CRM, email service, or API before production use.
+The consultation forms submit to `/api/enquiries` and store validated records
+in D1. The admin workspace is available at `/admin/enquiries` and fails closed
+when no administrator allowlist is configured.
 
 ## Reference assets
 
