@@ -299,6 +299,135 @@
   font-size: 9px;
 }
 
+.reportCard {
+  display: grid !important;
+  grid-template-columns: minmax(330px, 0.78fr) minmax(430px, 1.22fr);
+  gap: 0 !important;
+  margin-top: 20px;
+  padding: 0 !important;
+  overflow: hidden;
+  border-color: #dce5ed !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 42px rgba(29, 54, 75, 0.055) !important;
+}
+
+.reportSummary,
+.trendSection {
+  min-width: 0;
+  padding: 22px 24px;
+}
+
+.reportSummary > header p,
+.trendSection > header p {
+  margin: 0 0 4px;
+  color: #2874c4;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.reportSummary > header h2,
+.trendSection > header h3 {
+  margin: 0;
+  color: #213847;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+
+.reportSummary > header > span {
+  display: block;
+  margin-top: 4px;
+  color: #8996a0;
+  font-size: 9px;
+}
+
+.reportMetrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 17px;
+}
+
+.reportMetrics article {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+  padding: 11px;
+  border: 1px solid #e2e9ef;
+  border-radius: 11px;
+  background: #f9fbfd;
+}
+
+.reportMetrics article > span {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 9px;
+  color: #236db5;
+  background: #e8f2fc;
+}
+
+.reportMetrics svg {
+  width: 15px;
+}
+
+.reportMetrics article > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.reportMetrics strong {
+  color: #243c4c;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.reportMetrics small {
+  margin-top: 4px;
+  overflow: hidden;
+  color: #8996a0;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trendSection {
+  border-left: 1px solid #e5ebf1;
+  background: #fbfcfe;
+}
+
+.trendSection > header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.trendSection > header > span {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border: 1px solid #dfe8ef;
+  border-radius: 999px;
+  color: #71828e;
+  background: #fff;
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.trendChart {
+  width: 100% !important;
+  height: 180px !important;
+  margin-top: 11px;
+  aspect-ratio: auto !important;
+  color: #748591;
+  font-size: 8px;
+}
+
 .workspaceCard {
   gap: 0 !important;
   margin-top: 20px;
@@ -322,6 +451,13 @@
   margin: 0;
   font-size: 19px;
   letter-spacing: -0.025em;
+}
+
+.workspaceControls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .filters {
@@ -373,6 +509,31 @@
 .filters [data-variant="ghost"] {
   color: #687985;
   background: transparent;
+}
+
+.exportButton {
+  display: inline-flex;
+  min-height: 39px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+  padding: 0 12px;
+  border: 1px solid #bcd2e7;
+  border-radius: 9px;
+  color: #1f68ae;
+  background: #f6faff;
+  font-size: 10px;
+  font-weight: 800;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.exportButton:hover {
+  border-color: #8fb6d9;
+  background: #eaf4fd;
+}
+
+.exportButton svg {
+  width: 14px;
 }
 
 .desktopTable {
@@ -949,6 +1110,19 @@
     flex-direction: column;
   }
 
+  .reportCard {
+    grid-template-columns: 1fr;
+  }
+
+  .trendSection {
+    border-top: 1px solid #e5ebf1;
+    border-left: 0;
+  }
+
+  .workspaceControls {
+    justify-content: space-between;
+  }
+
   .searchField {
     width: min(100%, 330px);
   }
@@ -1050,6 +1224,23 @@
     border-radius: 15px !important;
   }
 
+  .reportCard {
+    border-radius: 15px !important;
+  }
+
+  .reportSummary,
+  .trendSection {
+    padding: 19px;
+  }
+
+  .reportMetrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trendChart {
+    height: 165px !important;
+  }
+
   .workspaceTop {
     padding: 19px;
   }
@@ -1057,6 +1248,15 @@
   .filters {
     align-items: stretch;
     flex-wrap: wrap;
+  }
+
+  .workspaceControls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .exportButton {
+    align-self: flex-start;
   }
 
   .searchField {

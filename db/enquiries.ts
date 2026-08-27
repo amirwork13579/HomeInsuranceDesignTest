@@ -28,6 +28,19 @@ export type EnquiryStats = {
   resolved: number;
 };
 
+export type EnquiryTrendPoint = {
+  day: string;
+  count: number;
+};
+
+export type EnquiryReport = {
+  last7Days: number;
+  last30Days: number;
+  unresolved: number;
+  resolutionRate: number;
+  trend: EnquiryTrendPoint[];
+};
+
 export type EnquiryActivityKind = "created" | "note" | "status_change";
 
 export type EnquiryActivityRecord = {
@@ -60,6 +73,51 @@ type EnquiryStatsRow = {
   inProgressCount: number;
   resolvedCount: number;
 };
+
+type EnquiryReportRow = {
+  total: number;
+  last7Days: number;
+  last30Days: number;
+  unresolved: number;
+  resolved: number;
+};
+
+type EnquiryTrendRow = {
+  day: string;
+  count: number;
+};
+
+type EnquiryFilters = {
+  query?: string;
+  status?: EnquiryStatus;
+};
+
+function buildEnquiryFilters(options: EnquiryFilters) {
+  const conditions: string[] = [];
+  const bindings: string[] = [];
+  const query = options.query?.trim().slice(0, 100).toLowerCase();
+
+  if (options.status) {
+    conditions.push("status = ?");
+    bindings.push(options.status);
+  }
+
+  if (query) {
+    conditions.push(`(
+      LOWER(first_name || ' ' || last_name) LIKE ? OR
+      LOWER(email) LIKE ? OR
+      LOWER(phone) LIKE ? OR
+      LOWER(claim_type) LIKE ?
+    )`);
+    const pattern = `%${query}%`;
+    bindings.push(pattern, pattern, pattern, pattern);
+  }
+
+  return {
+    bindings,
+    whereClause: conditions.length ? ` WHERE ${conditions.join(" AND ")}` : "",
+  };
+}
 
 export async function createEnquiry(enquiry: NewEnquiry) {
   const id = crypto.randomUUID();
@@ -116,27 +174,7 @@ export async function listEnquiries(options: {
   status?: EnquiryStatus;
 }) {
   const database = getD1();
-  const conditions: string[] = [];
-  const bindings: string[] = [];
-  const query = options.query?.trim().slice(0, 100).toLowerCase();
-
-  if (options.status) {
-    conditions.push("status = ?");
-    bindings.push(options.status);
-  }
-
-  if (query) {
-    conditions.push(`(
-      LOWER(first_name || ' ' || last_name) LIKE ? OR
-      LOWER(email) LIKE ? OR
-      LOWER(phone) LIKE ? OR
-      LOWER(claim_type) LIKE ?
-    )`);
-    const pattern = `%${query}%`;
-    bindings.push(pattern, pattern, pattern, pattern);
-  }
-
-  const whereClause = conditions.length ? ` WHERE ${conditions.join(" AND ")}` : "";
+  const { bindings, whereClause } = buildEnquiryFilters(options);
   const countRow = await database
     .prepare(`SELECT COUNT(*) AS total FROM enquiries${whereClause}`)
     .bind(...bindings)
@@ -172,6 +210,34 @@ export async function listEnquiries(options: {
   };
 }
 
+export async function listEnquiriesForExport(options: EnquiryFilters) {
+  const { bindings, whereClause } = buildEnquiryFilters(options);
+  const rows = await getD1()
+    .prepare(
+      `SELECT
+        id,
+        first_name AS firstName,
+        last_name AS lastName,
+        email,
+        phone,
+        claim_type AS claimType,
+        message,
+        source,
+        status,
+        created_at AS createdAt
+      FROM enquiries${whereClause}
+      ORDER BY created_at DESC, id DESC
+      LIMIT 5000`
+    )
+    .bind(...bindings)
+    .all<EnquiryRow>();
+
+  return (rows.results ?? []).map((row): EnquiryRecord => ({
+    ...row,
+    status: isEnquiryStatus(row.status) ? row.status : "new",
+  }));
+}
+
 export async function getEnquiryStats(): Promise<EnquiryStats> {
   const row = await getD1()
     .prepare(
@@ -191,6 +257,50 @@ export async function getEnquiryStats(): Promise<EnquiryStats> {
     contacted: Number(row?.contactedCount ?? 0),
     inProgress: Number(row?.inProgressCount ?? 0),
     resolved: Number(row?.resolvedCount ?? 0),
+  };
+}
+
+export async function getEnquiryReport(): Promise<EnquiryReport> {
+  const database = getD1();
+  const [summaryResult, trendResult] = await database.batch([
+    database.prepare(
+      `SELECT
+        COUNT(*) AS total,
+        COALESCE(SUM(CASE WHEN created_at >= datetime('now', '-7 days') THEN 1 ELSE 0 END), 0) AS last7Days,
+        COALESCE(SUM(CASE WHEN created_at >= datetime('now', '-30 days') THEN 1 ELSE 0 END), 0) AS last30Days,
+        COALESCE(SUM(CASE WHEN status != 'resolved' THEN 1 ELSE 0 END), 0) AS unresolved,
+        COALESCE(SUM(CASE WHEN status = 'resolved' THEN 1 ELSE 0 END), 0) AS resolved
+      FROM enquiries`
+    ),
+    database.prepare(
+      `WITH RECURSIVE date_range(day) AS (
+        SELECT date('now', '-13 days')
+        UNION ALL
+        SELECT date(day, '+1 day')
+        FROM date_range
+        WHERE day < date('now')
+      )
+      SELECT date_range.day AS day, COUNT(enquiries.id) AS count
+      FROM date_range
+      LEFT JOIN enquiries ON date(enquiries.created_at) = date_range.day
+      GROUP BY date_range.day
+      ORDER BY date_range.day ASC`
+    ),
+  ]);
+
+  const row = (summaryResult.results?.[0] ?? null) as EnquiryReportRow | null;
+  const total = Number(row?.total ?? 0);
+  const resolved = Number(row?.resolved ?? 0);
+
+  return {
+    last7Days: Number(row?.last7Days ?? 0),
+    last30Days: Number(row?.last30Days ?? 0),
+    unresolved: Number(row?.unresolved ?? 0),
+    resolutionRate: total ? Math.round((resolved / total) * 100) : 0,
+    trend: (trendResult.results ?? []).map((point) => {
+      const row = point as EnquiryTrendRow;
+      return { day: row.day, count: Number(row.count ?? 0) };
+    }),
   };
 }
 

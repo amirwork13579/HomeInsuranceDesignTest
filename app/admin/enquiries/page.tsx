@@ -5,6 +5,7 @@ import {
   Activity,
   CheckCircle2,
   Clock3,
+  Download,
   Inbox,
   LayoutDashboard,
   LogOut,
@@ -26,7 +27,11 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { chatGPTSignOutPath } from "@/app/chatgpt-auth";
-import { getEnquiryStats, listEnquiries } from "@/db/enquiries";
+import {
+  getEnquiryReport,
+  getEnquiryStats,
+  listEnquiries,
+} from "@/db/enquiries";
 import { requireAdminUser } from "@/lib/admin-auth";
 import {
   ENQUIRY_STATUSES,
@@ -35,6 +40,7 @@ import {
 } from "@/lib/enquiry-status";
 
 import { EnquiriesDashboard } from "./enquiries-dashboard";
+import { EnquiryReport } from "./enquiry-report";
 import styles from "./admin.module.css";
 
 export const dynamic = "force-dynamic";
@@ -61,6 +67,14 @@ function pageHref(page: number, query: string, status?: string) {
   return `/admin/enquiries${search ? `?${search}` : ""}`;
 }
 
+function exportHref(query: string, status?: string) {
+  const params = new URLSearchParams();
+  if (query) params.set("q", query);
+  if (status) params.set("status", status);
+  const search = params.toString();
+  return `/api/admin/enquiries/export${search ? `?${search}` : ""}`;
+}
+
 function visiblePages(current: number, total: number) {
   const start = Math.max(1, Math.min(current - 2, total - 4));
   const end = Math.min(total, start + 4);
@@ -80,9 +94,10 @@ export default async function EnquiriesAdminPage({
   const requestedPage = Number.parseInt(firstValue(params.page) ?? "1", 10);
   const page = Number.isFinite(requestedPage) && requestedPage > 0 ? requestedPage : 1;
 
-  const [{ enquiries, total }, stats] = await Promise.all([
+  const [{ enquiries, total }, stats, report] = await Promise.all([
     listEnquiries({ page, pageSize: PAGE_SIZE, query, status }),
     getEnquiryStats(),
+    getEnquiryReport(),
   ]);
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
@@ -140,18 +155,29 @@ export default async function EnquiriesAdminPage({
             })}
           </section>
 
+          <EnquiryReport report={report} />
+
           <Card className={styles.workspaceCard}>
             <div className={styles.workspaceTop}>
               <div><p>Enquiry queue</p><h2>{resultLabel}</h2></div>
-              <form action="/admin/enquiries" method="get" className={styles.filters}>
-                <label className={styles.searchField}><span className="sr-only">Search enquiries</span><Search aria-hidden="true" /><Input name="q" defaultValue={query} placeholder="Search customer, email or claim..." /></label>
-                <NativeSelect name="status" defaultValue={status ?? ""} aria-label="Filter by status">
-                  <NativeSelectOption value="">All statuses</NativeSelectOption>
-                  {ENQUIRY_STATUSES.map((value) => <NativeSelectOption key={value} value={value}>{ENQUIRY_STATUS_LABELS[value]}</NativeSelectOption>)}
-                </NativeSelect>
-                <Button type="submit">Filter</Button>
-                {(query || status) && <Button variant="ghost" asChild><Link href="/admin/enquiries">Clear</Link></Button>}
-              </form>
+              <div className={styles.workspaceControls}>
+                <form action="/admin/enquiries" method="get" className={styles.filters}>
+                  <label className={styles.searchField}><span className="sr-only">Search enquiries</span><Search aria-hidden="true" /><Input name="q" defaultValue={query} placeholder="Search customer, email or claim..." /></label>
+                  <NativeSelect name="status" defaultValue={status ?? ""} aria-label="Filter by status">
+                    <NativeSelectOption value="">All statuses</NativeSelectOption>
+                    {ENQUIRY_STATUSES.map((value) => <NativeSelectOption key={value} value={value}>{ENQUIRY_STATUS_LABELS[value]}</NativeSelectOption>)}
+                  </NativeSelect>
+                  <Button type="submit">Filter</Button>
+                  {(query || status) && <Button variant="ghost" asChild><Link href="/admin/enquiries">Clear</Link></Button>}
+                </form>
+                <a
+                  className={styles.exportButton}
+                  href={exportHref(query, status)}
+                  title="Download up to 5,000 matching enquiries as CSV"
+                >
+                  <Download aria-hidden="true" /> Export CSV
+                </a>
+              </div>
             </div>
 
             <EnquiriesDashboard enquiries={enquiries} />

@@ -11,7 +11,7 @@ administration area.
 - full-screen video hero, responsive navigation, interactive service cards, and consultation forms
 - working video dialog
 - D1-backed enquiry storage with server-side validation
-- ChatGPT-authenticated admin dashboard with search, filtering, record details, status management, private notes, and activity history
+- ChatGPT-authenticated admin dashboard with search, filtering, record details, status management, private notes, activity history, reporting, and protected CSV export
 - mobile, tablet, reduced-motion, keyboard, and focus states
 
 ## Run locally
