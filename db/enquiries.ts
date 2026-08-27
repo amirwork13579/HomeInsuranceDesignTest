@@ -210,7 +210,9 @@ export async function listEnquiries(options: {
   };
 }
 
-export async function listEnquiriesForExport(options: EnquiryFilters) {
+export async function listEnquiriesForExport(
+  options: EnquiryFilters
+): Promise<EnquiryRecord[]> {
   const { bindings, whereClause } = buildEnquiryFilters(options);
   const rows = await getD1()
     .prepare(
