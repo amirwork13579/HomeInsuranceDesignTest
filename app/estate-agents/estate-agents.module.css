@@ -1,6 +1,11 @@
 .page {
+  --partner-image: url("https://www.homeclaimsassist.co.uk/images/heroes/estate-agents.jpg");
   background: #fff;
   color: var(--ink);
+}
+
+.brokerPage {
+  --partner-image: url("https://www.homeclaimsassist.co.uk/images/heroes/insurance-brokers.jpg");
 }
 
 .hero {
@@ -10,7 +15,7 @@
   color: #fff;
   background:
     linear-gradient(90deg, rgba(5, 24, 52, 0.98) 0%, rgba(7, 38, 81, 0.9) 47%, rgba(18, 77, 151, 0.3) 82%),
-    url("https://www.homeclaimsassist.co.uk/images/heroes/estate-agents.jpg") center 42% / cover no-repeat;
+    var(--partner-image) center 42% / cover no-repeat;
 }
 
 .heroShade {
@@ -151,6 +156,7 @@
 .problemSection,
 .solutionSection,
 .benefitsSection,
+.differenceSection,
 .regulationSection,
 .claimsSection,
 .proofSection,
@@ -160,6 +166,7 @@
 }
 
 .problemSection,
+.differenceSection,
 .regulationSection,
 .faqSection {
   background: #f7faf8;
@@ -344,6 +351,18 @@
   list-style: none;
 }
 
+.brokerPage .solutionGrid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.brokerPage .solutionGrid li {
+  padding: 24px;
+}
+
+.brokerPage .solutionGrid h3 {
+  font-size: 18px;
+}
+
 .solutionGrid li {
   min-height: 325px;
   padding: 28px;
@@ -427,6 +446,89 @@
   line-height: 1.68;
 }
 
+.differenceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.differencePanel {
+  padding: 40px;
+  border: 1px solid #e1e9e4;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(29, 53, 63, 0.08);
+}
+
+.differencePanel > p {
+  margin: 0 0 10px;
+  color: #bd514d;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.differencePanel h3 {
+  margin: 0 0 26px;
+  font-size: 28px;
+}
+
+.differencePanel ul {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.differencePanel li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.differencePanel li > span,
+.differencePanel li > svg {
+  display: grid;
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.beforePanel li > span {
+  background: #fbeceb;
+  color: #bd514d;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.afterPanel {
+  border-color: transparent;
+  background: linear-gradient(140deg, #153746, #205164);
+  color: #fff;
+  box-shadow: 0 25px 60px rgba(24, 60, 73, 0.2);
+}
+
+.afterPanel > p {
+  color: #4bd0e9;
+}
+
+.afterPanel li {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.afterPanel li > svg {
+  padding: 4px;
+  background: var(--green);
+  color: #fff;
+}
+
 .regulationLayout {
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
@@ -494,6 +596,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
+}
+
+.brokerPage .claimsGrid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .claimsGrid > a {
@@ -608,7 +714,7 @@
   border-radius: 22px;
   background:
     linear-gradient(180deg, transparent 28%, rgba(8, 27, 41, 0.9)),
-    url("https://www.homeclaimsassist.co.uk/images/heroes/estate-agents.jpg") center / cover no-repeat;
+    var(--partner-image) center / cover no-repeat;
   box-shadow: 0 30px 70px rgba(4, 19, 30, 0.38);
 }
 
@@ -862,6 +968,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .brokerPage .solutionGrid,
+  .brokerPage .claimsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .benefitsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -940,6 +1051,7 @@
   .problemSection,
   .solutionSection,
   .benefitsSection,
+  .differenceSection,
   .regulationSection,
   .claimsSection,
   .proofSection,
@@ -968,6 +1080,16 @@
   .benefitsGrid,
   .claimsGrid {
     grid-template-columns: 1fr;
+  }
+
+  .brokerPage .solutionGrid,
+  .brokerPage .claimsGrid,
+  .differenceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .differencePanel {
+    padding: 30px 23px;
   }
 
   .solutionGrid li,

@@ -167,7 +167,7 @@ const partners = [
     title: "Insurance Brokers",
     icon: ShieldCheck,
     copy: "We manage claims end-to-end for your policyholders while strengthening the relationship you have built.",
-    href: "#contact",
+    href: "/insurance-brokers",
   },
   {
     title: "Leak Detection",
