@@ -97,6 +97,7 @@ const perils = [
       "Fire can devastate your property in minutes. We make sure repairs, contents and alternative accommodation are fully represented.",
     image: `${source}/images/services/fire-damage.jpg`,
     icon: Flame,
+    href: "/fire-damage",
   },
   {
     title: "Flood Damage",
@@ -104,6 +105,7 @@ const perils = [
       "From flash flooding to river damage, we manage emergency mitigation, drying and full reinstatement of your property.",
     image: `${source}/images/services/flood-damage.jpg`,
     icon: Waves,
+    href: "#contact",
   },
   {
     title: "Burst Pipes",
@@ -111,6 +113,7 @@ const perils = [
       "Escape of water is one of the most common claims. We identify hidden damage and make sure it is properly documented.",
     image: `${source}/images/services/burst-pipes-damage.jpg`,
     icon: Droplets,
+    href: "#contact",
   },
   {
     title: "Storm Damage",
@@ -118,6 +121,7 @@ const perils = [
       "High winds, heavy rain and lightning can cause structural damage. We assess the full extent and negotiate complete repairs.",
     image: `${source}/images/services/storm-damage.jpg`,
     icon: CloudLightning,
+    href: "#contact",
   },
   {
     title: "Impact Damage",
@@ -125,6 +129,7 @@ const perils = [
       "Vehicle collisions, falling trees and other impacts are handled from first assessment through to settlement.",
     image: `${source}/images/services/impact-damage.jpg`,
     icon: CarFront,
+    href: "#contact",
   },
 ];
 
@@ -298,7 +303,7 @@ export default function Home() {
                     <div className="peril-icon"><Icon aria-hidden="true" /></div>
                     <h3>{peril.title}</h3>
                     <p>{peril.description}</p>
-                    <a href="#contact">Learn More <ArrowRight aria-hidden="true" /></a>
+                    <a href={peril.href}>Learn More <ArrowRight aria-hidden="true" /></a>
                   </article>
                 );
               })}

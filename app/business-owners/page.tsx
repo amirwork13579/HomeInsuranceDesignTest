@@ -47,26 +47,31 @@ const commercialClaims = [
     title: "Fire & Smoke Damage",
     copy: "Structural reinstatement, smoke remediation, stock and equipment replacement, plus interruption losses while your premises are closed.",
     icon: Flame,
+    href: "/fire-damage",
   },
   {
     title: "Flood Damage",
     copy: "Industrial drying, contamination clean-up, plant and stock assessment, and revenue protection throughout restoration.",
     icon: Droplets,
+    href: "/#perils",
   },
   {
     title: "Storm Damage",
     copy: "Roof and structural repairs, water ingress, emergency boarding, damaged signage, and external reinstatement.",
     icon: CloudLightning,
+    href: "/#perils",
   },
   {
     title: "Impact Damage",
     copy: "Vehicle collisions, fallen trees, structural surveys, temporary works, and third-party recovery where applicable.",
     icon: Truck,
+    href: "/#perils",
   },
   {
     title: "Escape of Water",
     copy: "Burst pipes and leaks affecting ceilings, electrics, stock, fixtures, machinery, and the wider operation of your premises.",
     icon: Wrench,
+    href: "/#perils",
   },
 ];
 
@@ -202,12 +207,12 @@ export default function BusinessOwnersPage() {
               copy="Commercial losses involve more than building repairs. We bring the property, stock, equipment, lease, and trading-impact parts of the claim into one clear strategy."
             />
             <div className={styles.claimsGrid}>
-              {commercialClaims.map(({ title, copy, icon: Icon }) => (
+              {commercialClaims.map(({ title, copy, icon: Icon, href }) => (
                 <article key={title}>
                   <span><Icon aria-hidden="true" /></span>
                   <h3>{title}</h3>
                   <p>{copy}</p>
-                  <Link href="/#perils">Learn more <ArrowRight aria-hidden="true" /></Link>
+                  <Link href={href}>Learn more <ArrowRight aria-hidden="true" /></Link>
                 </article>
               ))}
             </div>
@@ -295,7 +300,7 @@ export default function BusinessOwnersPage() {
               copy="Explore the common causes of commercial claims and see how our process moves from assessment to settlement."
             />
             <div className={styles.relatedGrid}>
-              <Link href="/#perils"><Flame aria-hidden="true" /><span><strong>Fire Damage Claims</strong><small>Specialist support for fire, smoke, stock, and interruption losses.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/fire-damage"><Flame aria-hidden="true" /><span><strong>Fire Damage Claims</strong><small>Specialist support for fire, smoke, stock, and interruption losses.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#perils"><CloudLightning aria-hidden="true" /><span><strong>Storm Damage Claims</strong><small>Emergency protection, structural assessment, and reinstatement.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we manage an insurance claim step by step.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>

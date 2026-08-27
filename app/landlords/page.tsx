@@ -42,21 +42,25 @@ const rentalClaims = [
     title: "Burst Pipes & Escape of Water",
     copy: "Leaks, frozen pipes, and escape of water affecting ceilings, floors, walls, electrics, kitchens, and landlord-owned contents.",
     icon: Droplets,
+    href: "/#perils",
   },
   {
     title: "Flood Damage",
     copy: "River, surface-water, and drainage flooding, including contamination clean-up, specialist drying, and full reinstatement.",
     icon: Waves,
+    href: "/#perils",
   },
   {
     title: "Fire & Smoke Damage",
     copy: "Structural and contents damage, smoke remediation, electrical work, temporary protection, and complete property restoration.",
     icon: Flame,
+    href: "/fire-damage",
   },
   {
     title: "Storm Damage",
     copy: "Roof damage, water ingress, fallen trees, fencing, emergency repairs, and weatherproofing after severe conditions.",
     icon: CloudLightning,
+    href: "/#perils",
   },
 ];
 
@@ -174,12 +178,12 @@ export default function LandlordsPage() {
               copy="Tenant reporting, remote management, and the pressure to protect rental income make landlord claims different. We coordinate every moving part for you."
             />
             <div className={styles.claimsGrid}>
-              {rentalClaims.map(({ title, copy, icon: Icon }) => (
+              {rentalClaims.map(({ title, copy, icon: Icon, href }) => (
                 <article key={title}>
                   <span><Icon aria-hidden="true" /></span>
                   <h3>{title}</h3>
                   <p>{copy}</p>
-                  <Link href="/#perils">Learn more <ArrowRight aria-hidden="true" /></Link>
+                  <Link href={href}>Learn more <ArrowRight aria-hidden="true" /></Link>
                 </article>
               ))}
             </div>

@@ -42,26 +42,31 @@ const damageTypes = [
     title: "Fire & Smoke Damage",
     copy: "Structural repairs, smoke remediation, damaged contents, alternative accommodation, and full reinstatement after a house fire.",
     icon: Flame,
+    href: "/fire-damage",
   },
   {
     title: "Flood Damage",
     copy: "Drying programmes, contamination clean-up, structural assessment, and contents claims following internal or external flooding.",
     icon: Waves,
+    href: "/#perils",
   },
   {
     title: "Storm Damage",
     copy: "Roof repairs, water ingress, fallen trees, fencing, outbuildings, and emergency work after severe weather.",
     icon: CloudLightning,
+    href: "/#perils",
   },
   {
     title: "Burst Pipes",
     copy: "Escape-of-water damage to ceilings, floors, electrics, and hidden areas behind walls, including trace and access work.",
     icon: Droplets,
+    href: "/#perils",
   },
   {
     title: "Impact Damage",
     copy: "Vehicle collisions, falling trees and objects, plus the structural and contents damage caused by an accidental impact.",
     icon: CarFront,
+    href: "/#perils",
   },
 ];
 
@@ -164,12 +169,12 @@ export default function HomeownersPage() {
               copy="We manage insurer communication, professional assessments, evidence, valuation, and negotiation across the most common forms of insured property damage."
             />
             <div className={styles.damageGrid}>
-              {damageTypes.map(({ title, copy, icon: Icon }) => (
+              {damageTypes.map(({ title, copy, icon: Icon, href }) => (
                 <article key={title}>
                   <span><Icon aria-hidden="true" /></span>
                   <h3>{title}</h3>
                   <p>{copy}</p>
-                  <Link href="/#perils">Learn more <ArrowRight aria-hidden="true" /></Link>
+                  <Link href={href}>Learn more <ArrowRight aria-hidden="true" /></Link>
                 </article>
               ))}
             </div>
@@ -267,7 +272,7 @@ export default function HomeownersPage() {
               copy="Learn more about common home insurance claims and how independent representation protects your position."
             />
             <div className={styles.relatedGrid}>
-              <Link href="/#perils"><Flame aria-hidden="true" /><span><strong>Fire Damage Claims</strong><small>Support for fire, smoke, contents, and reinstatement claims.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/fire-damage"><Flame aria-hidden="true" /><span><strong>Fire Damage Claims</strong><small>Support for fire, smoke, contents, and reinstatement claims.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#perils"><Waves aria-hidden="true" /><span><strong>Flood Damage Claims</strong><small>Assessment, drying, decontamination, and full restoration.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we handle a claim from first contact to settlement.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>

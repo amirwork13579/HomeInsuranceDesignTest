@@ -1,0 +1,1079 @@
+.page {
+  background: #fff;
+  color: var(--ink);
+}
+
+.hero {
+  position: relative;
+  min-height: 760px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(5, 24, 52, 0.98) 0%, rgba(7, 38, 81, 0.9) 45%, rgba(18, 77, 151, 0.28) 80%),
+    url("https://www.homeclaimsassist.co.uk/images/services/fire-damage.jpg") center 45% / cover no-repeat;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 78% 14%, rgba(47, 187, 255, 0.39), transparent 32%),
+    linear-gradient(0deg, rgba(4, 17, 37, 0.8), transparent 54%);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 760px;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 96px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 42px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 12px;
+}
+
+.breadcrumb a:hover {
+  color: var(--hero-blue-light);
+}
+
+.heroEyebrow,
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 15px;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.heroEyebrow {
+  color: var(--hero-blue-light);
+}
+
+.heroEyebrow span {
+  width: 42px;
+  height: 2px;
+  background: currentColor;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(56px, 5.8vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.hero h1 em {
+  color: var(--hero-blue-light);
+  font-style: normal;
+}
+
+.heroCopy {
+  max-width: 690px;
+  margin: 26px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.heroPhone {
+  display: inline-flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 11px;
+  padding: 0 26px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.heroPhone svg {
+  width: 18px;
+  color: var(--hero-blue-light);
+}
+
+.reassurance {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  max-width: 970px;
+  margin-top: 52px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.reassurance > span {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  padding: 20px;
+  background: rgba(5, 25, 53, 0.72);
+}
+
+.reassurance svg {
+  grid-row: 1 / 3;
+  width: 20px;
+  color: var(--hero-blue-light);
+}
+
+.reassurance strong {
+  font-size: 13px;
+}
+
+.reassurance small {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 10px;
+}
+
+.perilNav {
+  position: sticky;
+  z-index: 20;
+  top: 82px;
+  border-bottom: 1px solid #e1e8e4;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 10px 30px rgba(26, 47, 58, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.perilNav > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.perilNav a {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-right: 1px solid #e4ebe7;
+  color: var(--muted-text);
+  font-size: 12px;
+  font-weight: 800;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.perilNav a:first-child {
+  border-left: 1px solid #e4ebe7;
+}
+
+.perilNav a:hover,
+.perilNav .activePeril {
+  color: #d85b31;
+  background: #fff3ee;
+}
+
+.perilNav svg {
+  width: 18px;
+}
+
+.immediateSection,
+.coverSection,
+.representationSection,
+.supportSection,
+.mistakesSection,
+.propertySection,
+.relatedSection,
+.faqSection {
+  padding: 108px 0;
+}
+
+.immediateSection,
+.mistakesSection,
+.faqSection {
+  background: #f7faf8;
+}
+
+.sectionHeading {
+  max-width: 850px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.sectionHeading .eyebrow {
+  justify-content: center;
+}
+
+.sectionHeading h2,
+.timelinePanel h2,
+.supportCopy h2,
+.faqLayout > div:first-child h2,
+.helpBanner h2 {
+  margin: 0;
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.sectionHeading > p:last-child {
+  max-width: 730px;
+  margin: 19px auto 0;
+  color: var(--muted-text);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.sectionHeading.light h2 {
+  color: #fff;
+}
+
+.sectionHeading.light > p:last-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.immediateGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.immediateGrid li {
+  min-height: 295px;
+  padding: 27px;
+  border: 1px solid #e2eae5;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(29, 53, 63, 0.06);
+}
+
+.immediateGrid li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.immediateGrid li > div span {
+  color: #d85b31;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+}
+
+.immediateGrid li > div svg {
+  width: 58px;
+  height: 58px;
+  padding: 14px;
+  border-radius: 15px;
+  background: #fff0e9;
+  color: #d85b31;
+}
+
+.immediateGrid h3 {
+  margin: 35px 0 12px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.immediateGrid p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.safetyCallout {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 32px;
+  padding: 27px 30px;
+  border: 1px solid #f0d4c7;
+  border-radius: 17px;
+  background: #fff3ee;
+}
+
+.safetyCallout > svg {
+  width: 48px;
+  height: 48px;
+  padding: 11px;
+  border-radius: 13px;
+  background: #d85b31;
+  color: #fff;
+}
+
+.safetyCallout strong {
+  font-size: 17px;
+}
+
+.safetyCallout p {
+  margin: 4px 0 0;
+  color: var(--muted-text);
+  font-size: 13px;
+}
+
+.coverSection {
+  color: #fff;
+  background:
+    radial-gradient(circle at 86% 3%, rgba(51, 126, 244, 0.18), transparent 28%),
+    linear-gradient(125deg, #142b3c, #1f3948 60%, #172f3f);
+}
+
+.coverSection .eyebrow {
+  color: #ff8b62;
+}
+
+.coverGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.coverGrid article {
+  min-height: 230px;
+  padding: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.coverGrid article > svg {
+  width: 34px;
+  color: #ff8b62;
+}
+
+.coverGrid h3 {
+  margin: 25px 0 9px;
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.coverGrid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  line-height: 1.68;
+}
+
+.representationSection {
+  background: #fff;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.comparisonGrid article {
+  overflow: hidden;
+  border: 1px solid #e1e9e4;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(29, 53, 63, 0.08);
+}
+
+.comparisonTitle {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 28px 30px;
+}
+
+.comparisonTitle > svg {
+  width: 58px;
+  height: 58px;
+  padding: 14px;
+  border-radius: 15px;
+}
+
+.insurerCard .comparisonTitle {
+  background: #fff3ee;
+}
+
+.insurerCard .comparisonTitle > svg {
+  background: #f3d3c7;
+  color: #c7552e;
+}
+
+.assessorCard .comparisonTitle {
+  background: #eaf7ed;
+}
+
+.assessorCard .comparisonTitle > svg {
+  background: #cdebd3;
+  color: var(--green-dark);
+}
+
+.comparisonTitle span {
+  display: flex;
+  flex-direction: column;
+}
+
+.comparisonTitle small {
+  color: var(--muted-text);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.comparisonTitle h3 {
+  margin: 3px 0 0;
+  font-size: 21px;
+}
+
+.comparisonGrid ul {
+  display: grid;
+  gap: 0;
+  padding: 0 30px 24px;
+  margin: 0;
+  list-style: none;
+}
+
+.comparisonGrid li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid #e8eeea;
+  color: var(--muted-text);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.comparisonGrid li:last-child {
+  border-bottom: 0;
+}
+
+.comparisonGrid li > span,
+.comparisonGrid li > svg {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.insurerCard li > span {
+  background: #fff0e9;
+  color: #c7552e;
+  font-weight: 900;
+  line-height: 18px;
+}
+
+.assessorCard li > svg {
+  padding: 3px;
+  background: var(--green);
+  color: #fff;
+}
+
+.timelinePanel {
+  display: grid;
+  grid-template-columns: 0.76fr 1.24fr;
+  gap: 58px;
+  align-items: center;
+  margin-top: 76px;
+  padding: 48px;
+  border-radius: 22px;
+  background: #f2f6f4;
+}
+
+.timelinePanel h2 {
+  font-size: clamp(34px, 3.7vw, 49px);
+}
+
+.timelinePanel > div:first-child > p:last-child {
+  margin: 18px 0 0;
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.tableShell {
+  overflow: hidden;
+  border: 1px solid #dce6e0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(29, 53, 63, 0.06);
+}
+
+.timelineTable {
+  border-collapse: collapse;
+}
+
+.timelineTable th {
+  height: 50px;
+  padding-inline: 16px;
+  background: #203744;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.timelineTable td {
+  padding: 16px;
+  border-color: #e8eeea;
+  color: var(--muted-text);
+  font-size: 12px;
+  white-space: normal;
+}
+
+.timelineTable td strong {
+  color: var(--ink);
+}
+
+.timelineTable td span {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #eaf7ed;
+  color: var(--green-dark);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.supportSection {
+  background: #f7faf8;
+}
+
+.supportLayout {
+  display: grid;
+  grid-template-columns: 0.94fr 1.06fr;
+  gap: 88px;
+  align-items: center;
+}
+
+.supportVisual {
+  position: relative;
+  min-height: 590px;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, transparent 36%, rgba(8, 27, 40, 0.82)),
+    url("https://www.homeclaimsassist.co.uk/images/services/fire-damage.jpg") center / cover no-repeat;
+  box-shadow: 0 30px 70px rgba(27, 50, 60, 0.22);
+}
+
+.supportVisual > div {
+  position: absolute;
+  left: 26px;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(17, 43, 56, 0.86);
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.supportVisual svg {
+  width: 29px;
+  color: #ff8b62;
+}
+
+.supportVisual span {
+  display: flex;
+  flex-direction: column;
+}
+
+.supportVisual strong {
+  font-size: 14px;
+}
+
+.supportVisual small {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 10px;
+}
+
+.supportCopy > p:not(.eyebrow) {
+  margin: 20px 0 0;
+  color: var(--muted-text);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.supportCopy ul {
+  display: grid;
+  gap: 13px;
+  padding: 0;
+  margin: 27px 0 31px;
+  list-style: none;
+}
+
+.supportCopy li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.supportCopy li svg {
+  width: 19px;
+  height: 19px;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+}
+
+.mistakesGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mistakesGrid li {
+  position: relative;
+  min-height: 315px;
+  overflow: hidden;
+  padding: 31px 25px;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 13px 34px rgba(29, 53, 63, 0.07);
+}
+
+.mistakesGrid li > span {
+  display: block;
+  color: #d85b31;
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
+.mistakesGrid li::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  bottom: -45px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(216, 91, 49, 0.06);
+}
+
+.mistakesGrid h3 {
+  margin: 32px 0 13px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.mistakesGrid p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.propertySection {
+  background: #fff;
+}
+
+.propertyGrid,
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.propertyGrid > a,
+.relatedGrid > a {
+  display: grid;
+  grid-template-columns: 52px 1fr 20px;
+  gap: 17px;
+  align-items: center;
+  padding: 29px;
+  border: 1px solid #e2eae5;
+  border-radius: 17px;
+  box-shadow: 0 12px 30px rgba(29, 53, 63, 0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.propertyGrid > a:hover,
+.relatedGrid > a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 42px rgba(29, 53, 63, 0.11);
+}
+
+.propertyGrid > a > svg:first-child,
+.relatedGrid > a > svg:first-child {
+  width: 52px;
+  height: 52px;
+  padding: 13px;
+  border-radius: 14px;
+  background: #eaf7ed;
+  color: var(--green-dark);
+}
+
+.propertyGrid > a > svg:last-child,
+.relatedGrid > a > svg:last-child {
+  width: 19px;
+  color: var(--green-dark);
+}
+
+.propertyGrid span,
+.relatedGrid span {
+  display: flex;
+  flex-direction: column;
+}
+
+.propertyGrid strong,
+.relatedGrid strong {
+  font-size: 16px;
+}
+
+.propertyGrid small,
+.relatedGrid small {
+  margin-top: 6px;
+  color: var(--muted-text);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.helpBanner {
+  padding: 62px 0;
+  color: #fff;
+  background: linear-gradient(110deg, #2478ea, #2357c8 55%, #173e98);
+}
+
+.helpBanner > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.helpBanner p {
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.helpBanner h2 {
+  max-width: 780px;
+  font-size: clamp(34px, 4vw, 50px);
+}
+
+.whiteButton {
+  flex: 0 0 auto;
+  min-height: 52px;
+  padding-inline: 28px;
+  border-radius: 999px;
+  background: #fff;
+  color: #174aaf;
+  font-weight: 850;
+}
+
+.whiteButton:hover {
+  background: #eef5ff;
+}
+
+.relatedSection {
+  background: #fff;
+}
+
+.faqLayout {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.faqLayout > div:first-child {
+  position: sticky;
+  top: 170px;
+}
+
+.faqLayout > div:first-child > p:not(.eyebrow) {
+  margin: 22px 0 0;
+  color: var(--muted-text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.faqLayout > div:first-child > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 24px;
+  color: var(--green-dark);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.faqLayout > div:first-child > a svg {
+  width: 18px;
+}
+
+.faqList {
+  overflow: hidden;
+  border: 1px solid #dfe8e2;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 15px 40px rgba(29, 53, 63, 0.06);
+}
+
+.faqItem {
+  border-color: #e7ede9;
+  padding-inline: 25px;
+}
+
+.faqTrigger {
+  padding-block: 22px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none !important;
+}
+
+.faqContent {
+  padding-right: 42px;
+  padding-bottom: 23px;
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+@media (max-width: 1100px) {
+  .coverGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mistakesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mistakesGrid li {
+    min-height: 290px;
+  }
+}
+
+@media (max-width: 940px) {
+  .hero,
+  .heroInner {
+    min-height: 820px;
+  }
+
+  .reassurance {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+  }
+
+  .perilNav {
+    position: relative;
+    top: 0;
+    overflow-x: auto;
+  }
+
+  .perilNav > div {
+    width: 860px;
+  }
+
+  .immediateGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comparisonGrid,
+  .timelinePanel,
+  .supportLayout,
+  .faqLayout {
+    grid-template-columns: 1fr;
+    gap: 58px;
+  }
+
+  .supportVisual {
+    width: min(100%, 680px);
+  }
+
+  .faqLayout > div:first-child {
+    position: static;
+  }
+
+  .propertyGrid,
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero,
+  .heroInner {
+    min-height: 840px;
+  }
+
+  .hero {
+    background-position: 63% center;
+  }
+
+  .heroInner {
+    justify-content: flex-start;
+    padding-top: 118px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 12.7vw, 61px);
+  }
+
+  .heroCopy {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .heroActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .heroPhone {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .reassurance {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 34px;
+  }
+
+  .reassurance > span {
+    grid-template-columns: 25px 1fr;
+    padding: 14px 12px;
+  }
+
+  .reassurance strong {
+    font-size: 11px;
+  }
+
+  .immediateSection,
+  .coverSection,
+  .representationSection,
+  .supportSection,
+  .mistakesSection,
+  .propertySection,
+  .relatedSection,
+  .faqSection {
+    padding: 78px 0;
+  }
+
+  .sectionHeading {
+    margin-bottom: 38px;
+  }
+
+  .sectionHeading h2,
+  .timelinePanel h2,
+  .supportCopy h2,
+  .faqLayout > div:first-child h2 {
+    font-size: 37px;
+  }
+
+  .sectionHeading > p:last-child {
+    font-size: 15px;
+  }
+
+  .immediateGrid,
+  .coverGrid,
+  .mistakesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .immediateGrid li,
+  .coverGrid article,
+  .mistakesGrid li {
+    min-height: 0;
+  }
+
+  .safetyCallout {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .safetyCallout > a {
+    grid-column: 1 / -1;
+  }
+
+  .timelinePanel {
+    padding: 31px 20px;
+  }
+
+  .tableShell {
+    overflow-x: auto;
+  }
+
+  .timelineTable {
+    min-width: 590px;
+  }
+
+  .supportVisual {
+    min-height: 440px;
+  }
+
+  .helpBanner {
+    padding: 48px 0;
+  }
+
+  .helpBanner > div {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 27px;
+  }
+
+  .helpBanner h2 {
+    font-size: 35px;
+  }
+
+  .whiteButton {
+    width: 100%;
+  }
+
+  .propertyGrid > a,
+  .relatedGrid > a {
+    padding: 22px 19px;
+  }
+
+  .faqItem {
+    padding-inline: 18px;
+  }
+
+  .faqTrigger {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .propertyGrid > a,
+  .relatedGrid > a,
+  .perilNav a {
+    transition: none;
+  }
+}
