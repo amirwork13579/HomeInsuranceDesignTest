@@ -370,7 +370,7 @@ export default function InsuranceBrokersPage() {
             />
             <div className={styles.relatedGrid}>
               <Link href="/estate-agents"><Building2 aria-hidden="true" /><span><strong>Estate Agent Partners</strong><small>Claims management partnership for letting agents.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#partners"><Droplets aria-hidden="true" /><span><strong>Leak Detection Partners</strong><small>Exclusive referral partnership for leak specialists.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/leak-detection-partners"><Droplets aria-hidden="true" /><span><strong>Leak Detection Partners</strong><small>Exclusive referral partnership for leak specialists.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/homeowners"><Home aria-hidden="true" /><span><strong>Homeowner Claims</strong><small>Expert support through every stage of a property claim.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>

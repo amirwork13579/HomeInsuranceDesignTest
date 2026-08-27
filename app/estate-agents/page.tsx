@@ -360,7 +360,7 @@ export default function EstateAgentsPage() {
             />
             <div className={styles.relatedGrid}>
               <Link href="/insurance-brokers"><ShieldCheck aria-hidden="true" /><span><strong>Insurance Broker Partners</strong><small>End-to-end claims support for your policyholders.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#partners"><Droplets aria-hidden="true" /><span><strong>Leak Detection Partners</strong><small>Exclusive referral partnership for leak specialists.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/leak-detection-partners"><Droplets aria-hidden="true" /><span><strong>Leak Detection Partners</strong><small>Exclusive referral partnership for leak specialists.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/landlords"><Building2 aria-hidden="true" /><span><strong>Landlord Claims</strong><small>Property restoration, tenant liaison, and rental income.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>

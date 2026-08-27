@@ -173,7 +173,7 @@ const partners = [
     title: "Leak Detection",
     icon: Droplets,
     copy: "You find the leak. We manage the claim, restoration and settlement while keeping your client informed.",
-    href: "#contact",
+    href: "/leak-detection-partners",
   },
 ];
 

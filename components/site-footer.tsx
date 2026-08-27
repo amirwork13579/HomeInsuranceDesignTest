@@ -38,7 +38,7 @@ const footerLinks = [
     links: [
       ["Estate Agents", "/estate-agents"],
       ["Insurance Brokers", "/insurance-brokers"],
-      ["Leak Detection", "/#partners"],
+      ["Leak Detection", "/leak-detection-partners"],
     ],
   },
   {

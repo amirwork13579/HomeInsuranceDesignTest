@@ -8,6 +8,10 @@
   --partner-image: url("https://www.homeclaimsassist.co.uk/images/heroes/insurance-brokers.jpg");
 }
 
+.leakPage {
+  --partner-image: url("https://www.homeclaimsassist.co.uk/images/heroes/leak-detection.jpg");
+}
+
 .hero {
   position: relative;
   min-height: 780px;
@@ -85,6 +89,11 @@
   font-style: normal;
 }
 
+.leakPage .hero h1 {
+  max-width: 980px;
+  font-size: clamp(54px, 5.3vw, 80px);
+}
+
 .heroCopy {
   max-width: 735px;
   margin: 26px 0 0;
@@ -151,6 +160,65 @@
   font-size: 10px;
   line-height: 1.45;
   text-transform: uppercase;
+}
+
+.exclusiveSection {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 36px;
+  background: #f7faf8;
+}
+
+.exclusiveCard {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 30px 34px;
+  border: 1px solid rgba(47, 125, 246, 0.2);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 24px 58px rgba(17, 53, 76, 0.16);
+  transform: translateY(-38px);
+}
+
+.exclusiveIcon {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  border-radius: 19px;
+  background: linear-gradient(135deg, #3279e9, #20a5d8);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(45, 126, 225, 0.24);
+}
+
+.exclusiveIcon svg {
+  width: 34px;
+}
+
+.exclusiveCopy > p:first-child {
+  margin: 0 0 6px;
+  color: #2478cf;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.exclusiveCopy h2 {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.exclusiveCopy > p:last-child {
+  max-width: 900px;
+  margin: 9px 0 0;
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.65;
 }
 
 .problemSection,
@@ -351,15 +419,18 @@
   list-style: none;
 }
 
-.brokerPage .solutionGrid {
+.brokerPage .solutionGrid,
+.leakPage .solutionGrid {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.brokerPage .solutionGrid li {
+.brokerPage .solutionGrid li,
+.leakPage .solutionGrid li {
   padding: 24px;
 }
 
-.brokerPage .solutionGrid h3 {
+.brokerPage .solutionGrid h3,
+.leakPage .solutionGrid h3 {
   font-size: 18px;
 }
 
@@ -969,7 +1040,8 @@
   }
 
   .brokerPage .solutionGrid,
-  .brokerPage .claimsGrid {
+  .brokerPage .claimsGrid,
+  .leakPage .solutionGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1048,6 +1120,35 @@
     font-size: 25px;
   }
 
+  .leakPage .hero,
+  .leakPage .heroInner {
+    min-height: 960px;
+  }
+
+  .leakPage .hero h1 {
+    font-size: 44px;
+  }
+
+  .exclusiveSection {
+    padding-bottom: 10px;
+  }
+
+  .exclusiveCard {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px;
+    transform: translateY(-24px);
+  }
+
+  .exclusiveIcon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .exclusiveCopy h2 {
+    font-size: 24px;
+  }
+
   .problemSection,
   .solutionSection,
   .benefitsSection,
@@ -1084,6 +1185,7 @@
 
   .brokerPage .solutionGrid,
   .brokerPage .claimsGrid,
+  .leakPage .solutionGrid,
   .differenceGrid {
     grid-template-columns: 1fr;
   }
