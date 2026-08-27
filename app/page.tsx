@@ -85,7 +85,7 @@ const services = [
     ],
     metric: "2,500+",
     metricLabel: "Claims Handled",
-    href: "#contact",
+    href: "/landlords",
     image: `${source}/images/services/landlords.jpg`,
   },
 ];
@@ -229,7 +229,7 @@ export default function Home() {
               When your property is damaged, your insurance company appoints a <a href="#process">loss adjuster</a> to assess the claim on their behalf. Their job is to manage the insurer&apos;s costs. A loss assessor does the opposite — we work exclusively for you, the policyholder, to ensure your claim is properly documented, correctly valued, and settled for the full amount you are entitled to.
             </p>
             <p>
-              Home Claims Assist provides specialist insurance claim management for <a href="/homeowners">homeowners</a>, <a href="#services">landlords</a>, and <a href="/business-owners">business owners</a> across the UK. Whether you are dealing with <a href="#perils">fire, flood, storm, burst pipe, or impact damage</a>, our qualified loss assessors handle the entire claim from initial inspection through to final settlement.
+              Home Claims Assist provides specialist insurance claim management for <a href="/homeowners">homeowners</a>, <a href="/landlords">landlords</a>, and <a href="/business-owners">business owners</a> across the UK. Whether you are dealing with <a href="#perils">fire, flood, storm, burst pipe, or impact damage</a>, our qualified loss assessors handle the entire claim from initial inspection through to final settlement.
             </p>
             <p>
               With over 15 years of experience and more than £50 million recovered for our clients, we understand how insurers operate and what it takes to achieve a fair outcome. There are no upfront fees — we only get paid when your claim settles.
@@ -326,7 +326,7 @@ export default function Home() {
                 <p>If your property is uninhabitable during repairs, your policy will typically cover temporary accommodation, storage and additional living expenses.</p>
               </article>
             </div>
-            <p className="coverage-note">Many claims also include professional cleaning, debris removal, emergency boarding, loss of rent for <a href="#services">landlords</a>, and business interruption for <a href="/business-owners">business owners</a>.</p>
+            <p className="coverage-note">Many claims also include professional cleaning, debris removal, emergency boarding, loss of rent for <a href="/landlords">landlords</a>, and business interruption for <a href="/business-owners">business owners</a>.</p>
           </div>
         </section>
 

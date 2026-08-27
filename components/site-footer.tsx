@@ -20,7 +20,7 @@ const footerLinks = [
     links: [
       ["Homeowners", "/homeowners"],
       ["Business Owners", "/business-owners"],
-      ["Landlords", "/#services"],
+      ["Landlords", "/landlords"],
     ],
   },
   {

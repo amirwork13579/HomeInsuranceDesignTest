@@ -1,0 +1,924 @@
+.page {
+  background: #fff;
+  color: var(--ink);
+}
+
+.hero {
+  position: relative;
+  min-height: 760px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(5, 24, 52, 0.98) 0%, rgba(7, 38, 81, 0.88) 44%, rgba(18, 77, 151, 0.27) 80%),
+    url("https://www.homeclaimsassist.co.uk/images/services/landlords.jpg") center 43% / cover no-repeat;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 79% 14%, rgba(47, 187, 255, 0.4), transparent 32%),
+    linear-gradient(0deg, rgba(4, 17, 37, 0.78), transparent 54%);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 760px;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 96px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 42px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 12px;
+}
+
+.breadcrumb a:hover {
+  color: var(--hero-blue-light);
+}
+
+.heroEyebrow,
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 15px;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.heroEyebrow {
+  color: var(--hero-blue-light);
+}
+
+.heroEyebrow span {
+  width: 42px;
+  height: 2px;
+  background: currentColor;
+}
+
+.hero h1 {
+  max-width: 830px;
+  margin: 0;
+  font-size: clamp(58px, 6vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.hero h1 em {
+  color: var(--hero-blue-light);
+  font-style: normal;
+}
+
+.heroCopy {
+  max-width: 680px;
+  margin: 26px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.heroPhone {
+  display: inline-flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 11px;
+  padding: 0 26px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.heroPhone svg {
+  width: 18px;
+  color: var(--hero-blue-light);
+}
+
+.reassurance {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  max-width: 980px;
+  margin-top: 52px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.reassurance > span {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  padding: 20px;
+  background: rgba(5, 25, 53, 0.72);
+}
+
+.reassurance svg {
+  grid-row: 1 / 3;
+  width: 20px;
+  color: var(--hero-blue-light);
+}
+
+.reassurance strong {
+  font-size: 13px;
+}
+
+.reassurance small {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 10px;
+}
+
+.claimsSection,
+.rentSection,
+.tenantSection,
+.portfolioSection,
+.relatedSection,
+.faqSection {
+  padding: 108px 0;
+}
+
+.claimsSection,
+.portfolioSection,
+.faqSection {
+  background: #f7faf8;
+}
+
+.sectionHeading {
+  max-width: 830px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.sectionHeading .eyebrow {
+  justify-content: center;
+}
+
+.sectionHeading h2,
+.rentCopy h2,
+.faqLayout > div:first-child h2,
+.helpBanner h2 {
+  margin: 0;
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.sectionHeading > p:last-child {
+  max-width: 720px;
+  margin: 19px auto 0;
+  color: var(--muted-text);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.sectionHeading.light h2 {
+  color: #fff;
+}
+
+.sectionHeading.light > p:last-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.claimsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.claimsGrid article {
+  display: flex;
+  min-height: 345px;
+  flex-direction: column;
+  padding: 29px 26px;
+  border: 1px solid #e2eae5;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(29, 53, 63, 0.06);
+  transition: transform 190ms ease, box-shadow 190ms ease;
+}
+
+.claimsGrid article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(29, 53, 63, 0.12);
+}
+
+.claimsGrid article > span {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border-radius: 15px;
+  background: #eaf7ed;
+  color: var(--green-dark);
+}
+
+.claimsGrid article > span svg {
+  width: 27px;
+}
+
+.claimsGrid h3 {
+  margin: 24px 0 12px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.claimsGrid p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.claimsGrid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.claimsGrid a svg {
+  width: 15px;
+}
+
+.adviceCallout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 34px;
+  padding: 27px 30px;
+  border-radius: 17px;
+  background: #edf5ef;
+}
+
+.adviceCallout strong {
+  font-size: 18px;
+}
+
+.adviceCallout p {
+  margin: 5px 0 0;
+  color: var(--muted-text);
+  font-size: 14px;
+}
+
+.rentSection {
+  background: #fff;
+}
+
+.rentLayout {
+  display: grid;
+  grid-template-columns: 0.96fr 1.04fr;
+  gap: 88px;
+  align-items: center;
+}
+
+.rentVisual {
+  position: relative;
+  min-height: 600px;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, transparent 34%, rgba(9, 28, 40, 0.78)),
+    url("https://www.homeclaimsassist.co.uk/images/services/landlords.jpg") center / cover no-repeat;
+  box-shadow: 0 30px 70px rgba(27, 50, 60, 0.22);
+}
+
+.rentBadge,
+.rentNote {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 18px 45px rgba(7, 27, 39, 0.26);
+}
+
+.rentBadge {
+  right: -30px;
+  top: 42px;
+  gap: 12px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #397df6, #1e59cb);
+}
+
+.rentBadge svg {
+  width: 34px;
+  height: 34px;
+}
+
+.rentBadge span,
+.rentNote span {
+  display: flex;
+  flex-direction: column;
+}
+
+.rentBadge strong {
+  font-size: 16px;
+}
+
+.rentBadge small {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.rentNote {
+  left: 27px;
+  bottom: 27px;
+  gap: 14px;
+  padding: 17px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(17, 43, 56, 0.86);
+  backdrop-filter: blur(10px);
+  font-size: 11px;
+}
+
+.rentNote svg {
+  width: 27px;
+  color: var(--green);
+}
+
+.rentNote strong {
+  color: #fff;
+  font-size: 13px;
+}
+
+.rentCopy > p:not(.eyebrow) {
+  margin: 20px 0 0;
+  color: var(--muted-text);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.rentCovers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px 20px;
+  margin: 27px 0 31px;
+}
+
+.rentCovers span {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.rentCovers svg {
+  flex: 0 0 auto;
+  width: 19px;
+  height: 19px;
+  margin-top: 1px;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+}
+
+.tenantSection {
+  color: #fff;
+  background:
+    radial-gradient(circle at 83% 1%, rgba(52, 126, 244, 0.2), transparent 28%),
+    linear-gradient(125deg, #142b3c, #1f3948 60%, #172f3f);
+}
+
+.tenantSection .eyebrow {
+  color: var(--green);
+}
+
+.tenantSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  list-style: none;
+}
+
+.tenantSteps li {
+  position: relative;
+  min-height: 330px;
+  padding: 34px 27px;
+  background: rgba(18, 43, 57, 0.92);
+}
+
+.tenantSteps li > span {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(66, 189, 78, 0.5);
+  border-radius: 50%;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.tenantSteps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 58px;
+  left: 76px;
+  width: calc(100% - 76px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(66, 189, 78, 0.42), transparent);
+}
+
+.tenantSteps h3 {
+  margin: 42px 0 13px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.tenantSteps p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 13.5px;
+  line-height: 1.72;
+}
+
+.tenantFootnote {
+  max-width: 850px;
+  margin: 35px auto 0;
+  color: rgba(255, 255, 255, 0.56);
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.portfolioGrid article {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid #e2eae5;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(29, 53, 63, 0.06);
+}
+
+.portfolioGrid article > svg {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  padding: 13px;
+  border-radius: 14px;
+  background: #eaf7ed;
+  color: var(--green-dark);
+}
+
+.portfolioGrid h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.portfolioGrid p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 13.5px;
+  line-height: 1.68;
+}
+
+.portfolioCallout {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 20px;
+  align-items: center;
+  max-width: 860px;
+  margin: 28px auto 0;
+  padding: 25px 28px;
+  border: 1px solid #dce7df;
+  border-radius: 18px;
+  background: #edf5ef;
+}
+
+.portfolioCallout > div {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.portfolioCallout svg {
+  width: 30px;
+}
+
+.portfolioCallout > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolioCallout strong {
+  font-size: 17px;
+}
+
+.portfolioCallout small {
+  margin-top: 5px;
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.helpBanner {
+  padding: 62px 0;
+  color: #fff;
+  background: linear-gradient(110deg, #2478ea, #2357c8 55%, #173e98);
+}
+
+.helpBanner > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.helpBanner p {
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.helpBanner h2 {
+  max-width: 800px;
+  font-size: clamp(34px, 4vw, 50px);
+}
+
+.whiteButton {
+  flex: 0 0 auto;
+  min-height: 52px;
+  padding-inline: 28px;
+  border-radius: 999px;
+  background: #fff;
+  color: #174aaf;
+  font-weight: 850;
+}
+
+.whiteButton:hover {
+  background: #eef5ff;
+}
+
+.relatedSection {
+  background: #fff;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.relatedGrid > a {
+  display: grid;
+  grid-template-columns: 52px 1fr 20px;
+  gap: 17px;
+  align-items: center;
+  padding: 29px;
+  border: 1px solid #e2eae5;
+  border-radius: 17px;
+  box-shadow: 0 12px 30px rgba(29, 53, 63, 0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.relatedGrid > a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 42px rgba(29, 53, 63, 0.11);
+}
+
+.relatedGrid > a > svg:first-child {
+  width: 52px;
+  height: 52px;
+  padding: 13px;
+  border-radius: 14px;
+  background: #eaf7ed;
+  color: var(--green-dark);
+}
+
+.relatedGrid > a > svg:last-child {
+  width: 19px;
+  color: var(--green-dark);
+}
+
+.relatedGrid span {
+  display: flex;
+  flex-direction: column;
+}
+
+.relatedGrid strong {
+  font-size: 16px;
+}
+
+.relatedGrid small {
+  margin-top: 6px;
+  color: var(--muted-text);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.faqLayout {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.faqLayout > div:first-child {
+  position: sticky;
+  top: 120px;
+}
+
+.faqLayout > div:first-child > p:not(.eyebrow) {
+  margin: 22px 0 0;
+  color: var(--muted-text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.faqLayout > div:first-child > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 24px;
+  color: var(--green-dark);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.faqLayout > div:first-child > a svg {
+  width: 18px;
+}
+
+.faqList {
+  overflow: hidden;
+  border: 1px solid #dfe8e2;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 15px 40px rgba(29, 53, 63, 0.06);
+}
+
+.faqItem {
+  border-color: #e7ede9;
+  padding-inline: 25px;
+}
+
+.faqTrigger {
+  padding-block: 22px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none !important;
+}
+
+.faqContent {
+  padding-right: 42px;
+  padding-bottom: 23px;
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+@media (max-width: 1060px) {
+  .claimsGrid,
+  .tenantSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .claimsGrid article {
+    min-height: 310px;
+  }
+
+  .tenantSteps li:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 940px) {
+  .hero,
+  .heroInner {
+    min-height: 820px;
+  }
+
+  .reassurance {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 660px;
+  }
+
+  .rentLayout,
+  .faqLayout {
+    grid-template-columns: 1fr;
+    gap: 58px;
+  }
+
+  .rentVisual {
+    width: min(100%, 680px);
+  }
+
+  .faqLayout > div:first-child {
+    position: static;
+  }
+
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero,
+  .heroInner {
+    min-height: 840px;
+  }
+
+  .hero {
+    background-position: 64% center;
+  }
+
+  .heroInner {
+    justify-content: flex-start;
+    padding-top: 118px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-size: clamp(45px, 13vw, 62px);
+  }
+
+  .heroCopy {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .heroActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .heroPhone {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .reassurance {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 34px;
+  }
+
+  .reassurance > span {
+    grid-template-columns: 25px 1fr;
+    padding: 14px 12px;
+  }
+
+  .reassurance strong {
+    font-size: 11px;
+  }
+
+  .claimsSection,
+  .rentSection,
+  .tenantSection,
+  .portfolioSection,
+  .relatedSection,
+  .faqSection {
+    padding: 78px 0;
+  }
+
+  .sectionHeading {
+    margin-bottom: 38px;
+  }
+
+  .sectionHeading h2,
+  .rentCopy h2,
+  .faqLayout > div:first-child h2 {
+    font-size: 37px;
+  }
+
+  .sectionHeading > p:last-child {
+    font-size: 15px;
+  }
+
+  .claimsGrid,
+  .tenantSteps,
+  .portfolioGrid,
+  .rentCovers {
+    grid-template-columns: 1fr;
+  }
+
+  .claimsGrid article,
+  .tenantSteps li {
+    min-height: 0;
+  }
+
+  .adviceCallout,
+  .helpBanner > div {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .rentVisual {
+    min-height: 450px;
+  }
+
+  .rentBadge {
+    right: 14px;
+    top: 16px;
+    padding: 14px 16px;
+  }
+
+  .rentBadge svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .rentNote {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .tenantSteps h3 {
+    margin-top: 28px;
+  }
+
+  .portfolioGrid article {
+    padding: 24px 21px;
+  }
+
+  .portfolioCallout {
+    grid-template-columns: 1fr;
+  }
+
+  .helpBanner {
+    padding: 48px 0;
+  }
+
+  .helpBanner > div {
+    gap: 27px;
+  }
+
+  .helpBanner h2 {
+    font-size: 35px;
+  }
+
+  .whiteButton {
+    width: 100%;
+  }
+
+  .relatedGrid > a {
+    padding: 22px 19px;
+  }
+
+  .faqItem {
+    padding-inline: 18px;
+  }
+
+  .faqTrigger {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .claimsGrid article,
+  .relatedGrid > a {
+    transition: none;
+  }
+}
