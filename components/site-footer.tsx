@@ -36,7 +36,7 @@ const footerLinks = [
   {
     title: "Partners",
     links: [
-      ["Estate Agents", "/#partners"],
+      ["Estate Agents", "/estate-agents"],
       ["Insurance Brokers", "/#partners"],
       ["Leak Detection", "/#partners"],
     ],

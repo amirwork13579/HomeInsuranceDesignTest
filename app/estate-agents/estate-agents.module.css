@@ -1,0 +1,1026 @@
+.page {
+  background: #fff;
+  color: var(--ink);
+}
+
+.hero {
+  position: relative;
+  min-height: 780px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(5, 24, 52, 0.98) 0%, rgba(7, 38, 81, 0.9) 47%, rgba(18, 77, 151, 0.3) 82%),
+    url("https://www.homeclaimsassist.co.uk/images/heroes/estate-agents.jpg") center 42% / cover no-repeat;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 16%, rgba(47, 187, 255, 0.42), transparent 31%),
+    linear-gradient(0deg, rgba(4, 17, 37, 0.82), transparent 56%);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 780px;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 98px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 38px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 12px;
+}
+
+.breadcrumb a:hover {
+  color: var(--hero-blue-light);
+}
+
+.heroEyebrow,
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 15px;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.heroEyebrow {
+  color: var(--hero-blue-light);
+}
+
+.heroEyebrow span {
+  width: 42px;
+  height: 2px;
+  background: currentColor;
+}
+
+.hero h1 {
+  max-width: 920px;
+  margin: 0;
+  font-size: clamp(56px, 5.7vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.hero h1 em {
+  color: var(--hero-blue-light);
+  font-style: normal;
+}
+
+.heroCopy {
+  max-width: 735px;
+  margin: 26px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.heroPhone {
+  display: inline-flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 11px;
+  padding: 0 26px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.heroPhone svg {
+  width: 18px;
+  color: var(--hero-blue-light);
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  max-width: 920px;
+  margin-top: 52px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.heroStats span {
+  display: flex;
+  min-height: 92px;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  background: rgba(5, 25, 53, 0.72);
+}
+
+.heroStats strong {
+  color: var(--hero-blue-light);
+  font-size: 30px;
+  line-height: 1;
+}
+
+.heroStats small {
+  max-width: 145px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 10px;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.problemSection,
+.solutionSection,
+.benefitsSection,
+.regulationSection,
+.claimsSection,
+.proofSection,
+.relatedSection,
+.faqSection {
+  padding: 108px 0;
+}
+
+.problemSection,
+.regulationSection,
+.faqSection {
+  background: #f7faf8;
+}
+
+.sectionHeading {
+  max-width: 860px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.sectionHeading .eyebrow {
+  justify-content: center;
+}
+
+.sectionHeading h2,
+.problemCopy h2,
+.regulationLayout h2,
+.proofCopy h2,
+.faqLayout > div:first-child h2,
+.partnerBanner h2 {
+  margin: 0;
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.sectionHeading > p:last-child {
+  max-width: 730px;
+  margin: 19px auto 0;
+  color: var(--muted-text);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.sectionHeading.light h2 {
+  color: #fff;
+}
+
+.sectionHeading.light > p:last-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.problemLayout {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 84px;
+  align-items: center;
+}
+
+.problemCopy > p:not(.eyebrow),
+.regulationLayout > div > p:not(.eyebrow),
+.proofCopy > p:not(.eyebrow) {
+  margin: 20px 0 0;
+  color: var(--muted-text);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.scenarioCard {
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 28px 68px rgba(24, 54, 68, 0.17);
+}
+
+.scenarioTop {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 26px 28px;
+  background: linear-gradient(135deg, #183b4c, #24596b);
+  color: #fff;
+}
+
+.scenarioTop > span {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 15px;
+  background: rgba(75, 208, 233, 0.16);
+  color: #4bd0e9;
+}
+
+.scenarioTop svg {
+  width: 25px;
+}
+
+.scenarioTop div {
+  display: flex;
+  flex-direction: column;
+}
+
+.scenarioTop small {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.scenarioTop strong {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.scenarioCard ol {
+  padding: 17px 28px 9px;
+  margin: 0;
+  list-style: none;
+}
+
+.scenarioCard li {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e6ede9;
+}
+
+.scenarioCard li > span {
+  color: #1687a8;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.scenarioCard li p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 13px;
+}
+
+.scenarioFoot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 20px 28px 28px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #eaf7fa;
+  color: #147f9d;
+}
+
+.scenarioFoot svg {
+  width: 28px;
+}
+
+.scenarioFoot span {
+  display: flex;
+  flex-direction: column;
+}
+
+.scenarioFoot strong {
+  font-size: 21px;
+}
+
+.scenarioFoot small {
+  color: var(--muted-text);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.solutionSection {
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 6%, rgba(47, 187, 255, 0.18), transparent 28%),
+    linear-gradient(125deg, #102d40, #1d4050 60%, #143547);
+}
+
+.solutionSection .eyebrow {
+  color: #4bd0e9;
+}
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.solutionGrid li {
+  min-height: 325px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.solutionGrid li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.solutionGrid li > div span {
+  color: #4bd0e9;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+}
+
+.solutionGrid li > div svg {
+  width: 58px;
+  height: 58px;
+  padding: 14px;
+  border-radius: 15px;
+  background: rgba(75, 208, 233, 0.12);
+  color: #4bd0e9;
+}
+
+.solutionGrid h3 {
+  margin: 38px 0 13px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.solutionGrid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.benefitsGrid article {
+  display: flex;
+  gap: 19px;
+  min-height: 205px;
+  padding: 28px;
+  border: 1px solid #e1e9e4;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(29, 53, 63, 0.06);
+}
+
+.benefitsGrid article > svg {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #eaf7ed;
+  color: var(--green-dark);
+}
+
+.benefitsGrid h3 {
+  margin: 2px 0 9px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.benefitsGrid p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.68;
+}
+
+.regulationLayout {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 84px;
+  align-items: center;
+}
+
+.regulationPanel {
+  padding: 38px;
+  border-radius: 22px;
+  background: linear-gradient(140deg, #153746, #205164);
+  color: #fff;
+  box-shadow: 0 25px 60px rgba(24, 60, 73, 0.2);
+}
+
+.regulationPanel > span {
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  border-radius: 17px;
+  background: rgba(75, 208, 233, 0.13);
+  color: #4bd0e9;
+}
+
+.regulationPanel > span svg {
+  width: 31px;
+}
+
+.regulationPanel h3 {
+  margin: 25px 0 20px;
+  font-size: 24px;
+}
+
+.regulationPanel ul,
+.proofCopy ul {
+  display: grid;
+  gap: 13px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.regulationPanel li,
+.proofCopy li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.regulationPanel li svg,
+.proofCopy li svg {
+  flex: 0 0 auto;
+  width: 19px;
+  height: 19px;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+}
+
+.claimsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.claimsGrid > a {
+  display: flex;
+  min-height: 335px;
+  flex-direction: column;
+  padding: 27px;
+  border: 1px solid #e1e9e4;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(29, 53, 63, 0.06);
+  transition: transform 190ms ease, box-shadow 190ms ease;
+}
+
+.claimsGrid > a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(29, 53, 63, 0.12);
+}
+
+.claimsGrid > a > span {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  border-radius: 15px;
+  background: #eaf7fa;
+  color: #147f9d;
+}
+
+.claimsGrid > a > span svg {
+  width: 27px;
+}
+
+.claimsGrid h3 {
+  margin: 25px 0 11px;
+  font-size: 19px;
+  line-height: 1.28;
+  text-transform: capitalize;
+}
+
+.claimsGrid p {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.68;
+}
+
+.claimsGrid small {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.claimsGrid small svg {
+  width: 15px;
+}
+
+.claimsNote {
+  margin: 32px auto 0;
+  color: var(--muted-text);
+  font-size: 14px;
+  text-align: center;
+}
+
+.claimsNote a {
+  color: var(--green-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.proofSection {
+  color: #fff;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(56, 190, 76, 0.13), transparent 29%),
+    #122b39;
+}
+
+.proofLayout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.proofCopy .eyebrow {
+  color: var(--green);
+}
+
+.proofCopy h2 {
+  color: #fff;
+}
+
+.proofCopy > p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.proofCopy ul {
+  margin: 27px 0 31px;
+}
+
+.proofVisual {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, transparent 28%, rgba(8, 27, 41, 0.9)),
+    url("https://www.homeclaimsassist.co.uk/images/heroes/estate-agents.jpg") center / cover no-repeat;
+  box-shadow: 0 30px 70px rgba(4, 19, 30, 0.38);
+}
+
+.proofVisual > div:first-child {
+  position: absolute;
+  left: 27px;
+  bottom: 27px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(12, 35, 50, 0.88);
+  backdrop-filter: blur(10px);
+}
+
+.proofVisual > div:first-child > svg {
+  width: 30px;
+  color: var(--green);
+}
+
+.proofVisual > div:first-child span {
+  display: flex;
+  flex-direction: column;
+}
+
+.proofVisual > div:first-child small {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.proofVisual > div:first-child strong {
+  margin-top: 3px;
+  font-size: 15px;
+}
+
+.proofMetric {
+  position: absolute;
+  right: -2px;
+  top: 36px;
+  display: flex;
+  width: 138px;
+  height: 138px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50% 0 0 50%;
+  background: linear-gradient(135deg, #38be4c, #248b35);
+  box-shadow: 0 18px 45px rgba(3, 18, 29, 0.34);
+}
+
+.proofMetric strong {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.proofMetric span {
+  margin-top: 7px;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.partnerBanner {
+  color: #fff;
+  background: linear-gradient(115deg, #1f64c9, #2581df 54%, #16749d);
+}
+
+.partnerBanner > div {
+  display: flex;
+  min-height: 300px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 54px;
+  padding-block: 54px;
+}
+
+.partnerBanner p {
+  margin: 0 0 9px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.partnerBanner h2 {
+  max-width: 760px;
+  font-size: clamp(34px, 4vw, 52px);
+}
+
+.partnerBanner > div > div:first-child > span {
+  display: block;
+  margin-top: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.partnerBanner > div > div:last-child {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.whiteButton {
+  min-height: 58px;
+  padding-inline: 30px;
+  border-radius: 999px;
+  background: #fff !important;
+  color: #1558ad !important;
+}
+
+.partnerBanner > div > div:last-child > a:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.partnerBanner > div > div:last-child > a:last-child svg {
+  width: 16px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.relatedGrid > a {
+  display: grid;
+  grid-template-columns: 54px 1fr 24px;
+  gap: 16px;
+  align-items: center;
+  min-height: 150px;
+  padding: 25px;
+  border: 1px solid #e2eae5;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(29, 53, 63, 0.06);
+  transition: transform 190ms ease, box-shadow 190ms ease;
+}
+
+.relatedGrid > a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(29, 53, 63, 0.11);
+}
+
+.relatedGrid > a > svg:first-child {
+  width: 54px;
+  height: 54px;
+  padding: 13px;
+  border-radius: 14px;
+  background: #eaf7ed;
+  color: var(--green-dark);
+}
+
+.relatedGrid span {
+  display: flex;
+  flex-direction: column;
+}
+
+.relatedGrid strong {
+  font-size: 16px;
+}
+
+.relatedGrid small {
+  margin-top: 5px;
+  color: var(--muted-text);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.relatedGrid > a > svg:last-child {
+  width: 20px;
+  color: var(--green-dark);
+}
+
+.faqLayout {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 84px;
+  align-items: start;
+}
+
+.faqLayout > div:first-child {
+  position: sticky;
+  top: 130px;
+}
+
+.faqLayout > div:first-child > p:not(.eyebrow) {
+  margin: 19px 0 27px;
+  color: var(--muted-text);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.faqLayout > div:first-child > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.faqLayout > div:first-child > a svg {
+  width: 18px;
+}
+
+.faqList {
+  display: grid;
+  gap: 12px;
+}
+
+.faqItem {
+  overflow: hidden;
+  border: 1px solid #dfe8e2 !important;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(29, 53, 63, 0.05);
+}
+
+.faqTrigger {
+  padding: 21px 23px !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  text-align: left;
+}
+
+.faqTrigger:hover {
+  text-decoration: none !important;
+}
+
+.faqContent {
+  padding: 0 23px 22px !important;
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.72;
+}
+
+@media (max-width: 1080px) {
+  .solutionGrid,
+  .claimsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .problemLayout,
+  .regulationLayout,
+  .proofLayout,
+  .faqLayout {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .faqLayout > div:first-child {
+    position: static;
+  }
+
+  .proofVisual {
+    min-height: 560px;
+  }
+
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .heroInner {
+    min-height: 850px;
+  }
+
+  .hero {
+    background-position: 64% center;
+  }
+
+  .heroInner {
+    padding-top: 118px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 26px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .heroCopy {
+    font-size: 15px;
+  }
+
+  .heroActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .heroPhone {
+    justify-content: center;
+  }
+
+  .heroStats {
+    grid-template-columns: 1fr;
+    margin-top: 35px;
+  }
+
+  .heroStats span {
+    min-height: 68px;
+    padding: 14px 18px;
+  }
+
+  .heroStats strong {
+    min-width: 76px;
+    font-size: 25px;
+  }
+
+  .problemSection,
+  .solutionSection,
+  .benefitsSection,
+  .regulationSection,
+  .claimsSection,
+  .proofSection,
+  .relatedSection,
+  .faqSection {
+    padding: 78px 0;
+  }
+
+  .sectionHeading {
+    margin-bottom: 40px;
+  }
+
+  .sectionHeading h2,
+  .problemCopy h2,
+  .regulationLayout h2,
+  .proofCopy h2,
+  .faqLayout > div:first-child h2 {
+    font-size: 38px;
+  }
+
+  .sectionHeading > p:last-child {
+    font-size: 15px;
+  }
+
+  .solutionGrid,
+  .benefitsGrid,
+  .claimsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutionGrid li,
+  .claimsGrid > a {
+    min-height: 0;
+  }
+
+  .scenarioCard li {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .regulationPanel {
+    padding: 29px 23px;
+  }
+
+  .proofVisual {
+    min-height: 430px;
+  }
+
+  .proofMetric {
+    top: 24px;
+    width: 115px;
+    height: 115px;
+  }
+
+  .proofVisual > div:first-child {
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .partnerBanner > div {
+    min-height: 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .partnerBanner h2 {
+    font-size: 36px;
+  }
+
+  .partnerBanner > div > div:last-child,
+  .partnerBanner .whiteButton {
+    width: 100%;
+  }
+
+  .relatedGrid > a {
+    grid-template-columns: 48px 1fr 20px;
+    padding: 21px;
+  }
+
+  .relatedGrid > a > svg:first-child {
+    width: 48px;
+    height: 48px;
+  }
+}

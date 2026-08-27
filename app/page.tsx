@@ -161,16 +161,19 @@ const partners = [
     title: "Estate Agents",
     icon: HomeIcon,
     copy: "Take property damage claims off your desk. We handle everything from the first call to the final repair.",
+    href: "/estate-agents",
   },
   {
     title: "Insurance Brokers",
     icon: ShieldCheck,
     copy: "We manage claims end-to-end for your policyholders while strengthening the relationship you have built.",
+    href: "#contact",
   },
   {
     title: "Leak Detection",
     icon: Droplets,
     copy: "You find the leak. We manage the claim, restoration and settlement while keeping your client informed.",
+    href: "#contact",
   },
 ];
 
@@ -371,12 +374,12 @@ export default function Home() {
           <div className="page-width">
             <SectionHeading eyebrow="Partner With Us" title="Your Industry. Our Expertise. Shared Revenue." copy="We partner with estate agents, insurance brokers, and leak detection companies across the UK. You refer the claim, we do the work, you get paid." />
             <div className="partner-grid">
-              {partners.map(({ title, icon: Icon, copy }) => (
+              {partners.map(({ title, icon: Icon, copy, href }) => (
                 <article key={title}>
                   <span className="partner-icon"><Icon aria-hidden="true" /></span>
                   <h3>{title}</h3>
                   <p>{copy}</p>
-                  <a href="#contact">Learn More <ArrowRight aria-hidden="true" /></a>
+                  <a href={href}>Learn More <ArrowRight aria-hidden="true" /></a>
                 </article>
               ))}
             </div>

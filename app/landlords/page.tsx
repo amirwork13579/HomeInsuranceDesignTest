@@ -287,7 +287,7 @@ export default function LandlordsPage() {
             />
             <div className={styles.relatedGrid}>
               <Link href="/burst-pipes"><Droplets aria-hidden="true" /><span><strong>Burst Pipe Claims</strong><small>Escape-of-water assessment, drying, evidence, and reinstatement.</small></span><ArrowRight aria-hidden="true" /></Link>
-              <Link href="/#partners"><Home aria-hidden="true" /><span><strong>Estate Agent Partners</strong><small>Claims management support for managed-property portfolios.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/estate-agents"><Home aria-hidden="true" /><span><strong>Estate Agent Partners</strong><small>Claims management support for managed-property portfolios.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we manage a claim from first contact to settlement.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>
           </div>
