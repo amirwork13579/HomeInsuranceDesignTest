@@ -71,7 +71,7 @@ const commercialClaims = [
     title: "Escape of Water",
     copy: "Burst pipes and leaks affecting ceilings, electrics, stock, fixtures, machinery, and the wider operation of your premises.",
     icon: Wrench,
-    href: "/#perils",
+    href: "/burst-pipes",
   },
 ];
 

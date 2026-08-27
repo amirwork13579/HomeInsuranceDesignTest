@@ -60,7 +60,7 @@ const damageTypes = [
     title: "Burst Pipes",
     copy: "Escape-of-water damage to ceilings, floors, electrics, and hidden areas behind walls, including trace and access work.",
     icon: Droplets,
-    href: "/#perils",
+    href: "/burst-pipes",
   },
   {
     title: "Impact Damage",

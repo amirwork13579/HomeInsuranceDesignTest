@@ -42,7 +42,7 @@ const rentalClaims = [
     title: "Burst Pipes & Escape of Water",
     copy: "Leaks, frozen pipes, and escape of water affecting ceilings, floors, walls, electrics, kitchens, and landlord-owned contents.",
     icon: Droplets,
-    href: "/#perils",
+    href: "/burst-pipes",
   },
   {
     title: "Flood Damage",
@@ -286,7 +286,7 @@ export default function LandlordsPage() {
               copy="Learn more about common rental-property losses and the professional support available throughout a claim."
             />
             <div className={styles.relatedGrid}>
-              <Link href="/#perils"><Droplets aria-hidden="true" /><span><strong>Burst Pipe Claims</strong><small>Escape-of-water assessment, drying, evidence, and reinstatement.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/burst-pipes"><Droplets aria-hidden="true" /><span><strong>Burst Pipe Claims</strong><small>Escape-of-water assessment, drying, evidence, and reinstatement.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#partners"><Home aria-hidden="true" /><span><strong>Estate Agent Partners</strong><small>Claims management support for managed-property portfolios.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#process"><ShieldCheck aria-hidden="true" /><span><strong>Our Claims Process</strong><small>See how we manage a claim from first contact to settlement.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>

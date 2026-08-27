@@ -1,6 +1,11 @@
 .page {
+  --peril-image: url("https://www.homeclaimsassist.co.uk/images/services/flood-damage.jpg");
   background: #fff;
   color: var(--ink);
+}
+
+.burstPage {
+  --peril-image: url("https://www.homeclaimsassist.co.uk/images/services/burst-pipes-damage.jpg");
 }
 
 .hero {
@@ -10,7 +15,7 @@
   color: #fff;
   background:
     linear-gradient(90deg, rgba(5, 24, 52, 0.98) 0%, rgba(7, 38, 81, 0.9) 45%, rgba(18, 77, 151, 0.27) 80%),
-    url("https://www.homeclaimsassist.co.uk/images/services/flood-damage.jpg") center 46% / cover no-repeat;
+    var(--peril-image) center 46% / cover no-repeat;
 }
 
 .heroShade {
@@ -386,7 +391,7 @@
   border-radius: 22px;
   background:
     linear-gradient(180deg, transparent 34%, rgba(7, 31, 45, 0.84)),
-    url("https://www.homeclaimsassist.co.uk/images/services/flood-damage.jpg") center / cover no-repeat;
+    var(--peril-image) center / cover no-repeat;
   box-shadow: 0 30px 70px rgba(27, 50, 60, 0.22);
 }
 

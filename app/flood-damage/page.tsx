@@ -221,7 +221,7 @@ export default function FloodDamagePage() {
           <div className="page-width">
             <Link href="/fire-damage"><Flame aria-hidden="true" /> Fire Damage</Link>
             <Link className={styles.activePeril} href="/flood-damage"><Waves aria-hidden="true" /> Flood Damage</Link>
-            <Link href="/#perils"><Droplets aria-hidden="true" /> Burst Pipes</Link>
+            <Link href="/burst-pipes"><Droplets aria-hidden="true" /> Burst Pipes</Link>
             <Link href="/#perils"><CloudLightning aria-hidden="true" /> Storm Damage</Link>
             <Link href="/#perils"><Building2 aria-hidden="true" /> Impact Damage</Link>
           </div>
@@ -377,7 +377,7 @@ export default function FloodDamagePage() {
               copy="Explore other water and weather claims or learn about specialist landlord claim support."
             />
             <div className={styles.relatedGrid}>
-              <Link href="/#perils"><Droplets aria-hidden="true" /><span><strong>Burst Pipe Claims</strong><small>Escape-of-water assessment, drying, repairs, and contents.</small></span><ArrowRight aria-hidden="true" /></Link>
+              <Link href="/burst-pipes"><Droplets aria-hidden="true" /><span><strong>Burst Pipe Claims</strong><small>Escape-of-water assessment, drying, repairs, and contents.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/#perils"><CloudLightning aria-hidden="true" /><span><strong>Storm Damage Claims</strong><small>Roof, structure, water ingress, and emergency protection.</small></span><ArrowRight aria-hidden="true" /></Link>
               <Link href="/landlords"><Building2 aria-hidden="true" /><span><strong>Landlord Claims</strong><small>Tenant liaison, reinstatement, and covered rental income.</small></span><ArrowRight aria-hidden="true" /></Link>
             </div>

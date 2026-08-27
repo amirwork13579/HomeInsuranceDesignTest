@@ -113,7 +113,7 @@ const perils = [
       "Escape of water is one of the most common claims. We identify hidden damage and make sure it is properly documented.",
     image: `${source}/images/services/burst-pipes-damage.jpg`,
     icon: Droplets,
-    href: "#contact",
+    href: "/burst-pipes",
   },
   {
     title: "Storm Damage",
